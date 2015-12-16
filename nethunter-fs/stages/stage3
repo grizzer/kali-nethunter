@@ -62,8 +62,10 @@ echo "source /root/.bashrc" >> kali-$architecture/root/.bash_profile
 echo "source /root/.profile" >> kali-$architecture/root/.bash_profile
 echo "cd ~/" >> kali-$architecture/root/.bash_profile
 
-# Modify Kismet log saving folder
-sed -i 's/hs/\/captures/g' kali-$architecture/etc/kismet/kismet.conf
+# Modify Kismet config
+sed -i 's/\/some\/path\/to\/logs/\/captures\/kismet/g' kali-$architecture/etc/kismet/kismet.conf
+sed -i 's/# logprefix/logprefix/g' kali-$architecture/etc/kismet/kismet.conf
+sed -i 's/#ncsource=wlan0/ncsource=wlan1/g' kali-$architecture/etc/kismet/kismet.conf
 
 # Modify SSHD to allow password logins which is a security risk 
 # if the user doesn't change their password
