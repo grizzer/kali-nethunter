@@ -119,3 +119,6 @@ LANG=C chroot kali-$architecture chmod 755 /usr/share/mana-toolkit/run-mana/*.sh
 
 # Insert my own Kalimenu... one that *works*!
 cp my_kalimenu kali-$architecture/usr/bin/kalimenu
+
+# Insert gDrive - command line interface to Google Drive
+cp drive-linux-arm kali-$architecture/usr/local/bin/drive
