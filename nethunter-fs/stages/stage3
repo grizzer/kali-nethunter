@@ -73,8 +73,8 @@ sed -i 's/# logprefix/logprefix/g' kali-$architecture/etc/kismet/kismet.conf
 sed -i 's/# ncsource=wlan0/ncsource=wlan1/g' kali-$architecture/etc/kismet/kismet.conf
 
 # Fix kalimenu, since it's being "depricated"...
-sed -i 's/gpsd \/tmp\/gps/gpsd -n \/tmp\/gps/g' kali-$architecture/usr/bin/kalimenu
-sed -i 's/kismet-\$NOW.kml/Kismet-\$NOW.kml/g' kali-$architecture/usr/bin/kalimenu
+# sed -i 's/gpsd \/tmp\/gps/gpsd -n \/tmp\/gps/g' kali-$architecture/usr/bin/kalimenu
+# sed -i 's/kismet-\$NOW.kml/Kismet-\$NOW.kml/g' kali-$architecture/usr/bin/kalimenu
 
 # Modify SSHD to allow password logins which is a security risk 
 # if the user doesn't change their password
@@ -116,3 +116,6 @@ LANG=C chroot kali-$architecture cp /etc/skel/.bashrc /root/.bashrc
 # Copy necessary scripts and make executable (/dev/null to supress error msgs for following symlinks)
 LANG=C chroot kali-$architecture chmod 755 /usr/bin/* 2> /dev/null
 LANG=C chroot kali-$architecture chmod 755 /usr/share/mana-toolkit/run-mana/*.sh 2> /dev/null
+
+# Insert my own Kalimenu... one that *works*!
+cp my_kalimenu kali-$architecture/usr/bin/kalimenu
