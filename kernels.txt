@@ -19,9 +19,15 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-flo-3.4-kitkat-mr2 flodeb
 # git clone https://github.com/binkybear/flo.git -b ElementalX-4.00 nexus7_2013-5
 
+# - Nexus 6P
+# git clone https://github.com/binkybear/AK-Angler.git -b ak-aosp-6.0.1-staging nexus6P-6
+
 # - Nexus 6
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-marshmallow-release nexus6-6
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-lollipop-release nexus6-5
+
+# - Nexus 5X
+# git clone https://github.com/binkybear/kernel_msm.git -b android-msm-bullhead-3.10-marshmallow-mr1 nexus5x-6
 
 # - Nexus 5
 # git clone https://github.com/binkybear/furnace_kernel_lge_hammerhead.git -b android-4.4
@@ -32,7 +38,11 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-lollipop-release nexus4-5
 
 # - OnePlus Two
-#  git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-12.1
+# OXYGEN
+# git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b OXYGEN
+# CM
+# git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-13.0
+# git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-12.1
 
 # - OnePlus One
 # git clone https://github.com/binkybear/AK-OnePone.git -b cm-11.0 oneplus11

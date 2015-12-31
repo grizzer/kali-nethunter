@@ -29,23 +29,38 @@ class LatestSU:
             print('URLError = ' + str(e.reason))
 
     def dlsupersu(self):
-        # Beta
-        getUrl = self.__getPage('http://download.chainfire.eu/743/SuperSU/BETA-SuperSU-v2.52.zip', True)
-        # Stable
-        #getUrl = self.__getPage('http://download.chainfire.eu/supersu', True)
+
+        getUrl = self.__getPage('http://download.chainfire.eu/750/SuperSU/BETA-SuperSU-v2.64-20151220185127.zip', True)
+        # Stable (release verison)
+        # getUrl = self.__getPage('http://download.chainfire.eu/supersu', True)
         latestUrl = getUrl + '?retrieve_file=1'
 
         return latestUrl
 
-def supersuBeta():
+    def dlsupersubeta(self):
+        # Get download URL
+        getUrl = self.__getPage('http://download.chainfire.eu/750/SuperSU/BETA-SuperSU-v2.64-20151220185127.zip', True)        
+        latestUrl = getUrl + '?retrieve_file=1'
+
+        return latestUrl
+
+
+def supersu(beta):
+
+    # Remove previous supersu.zip
+    if os.path.isfile("supersu/supersu.zip"):
+        os.remove("supersu/supersu.zip")
+
+    # Define class
+    ldclass = LatestSU()
+
+    if beta:
+        u = urllib2.urlopen(ldclass.dlsupersubeta())
+    else:
+        u = urllib2.urlopen(ldclass.dlsupersu())
 
     # Progress bar http://stackoverflow.com/a/22776
-    # SuperSU v2.62
-    url = "http://forum.xda-developers.com/attachment.php?attachmentid=3571657&d=1449763480"
-
     file_name = os.path.join('supersu', 'supersu.zip')
-    #file_name = url.split('/')[-1]
-    u = urllib2.urlopen(url)
     f = open(file_name, 'wb')
     meta = u.info()
     file_size = int(meta.getheaders("Content-Length")[0])
@@ -65,24 +80,14 @@ def supersuBeta():
         print status,
 
     f.close()
-
     pass
 
-
-def supersu():
-
-    ldclass = LatestSU()
-    filename = os.path.join('supersu', 'supersu.zip')
-
-    print('Downloading supersu.zip to supersu/supersu.zip ~4MB')
-    urllib.urlretrieve(ldclass.dlsupersu(), filename)
-
-def allapps():
+def allapps(checkforce):
 
     apps = {
-        'BlueNMEA-2.1.3':'http://max.kellermann.name/download/blue-nmea/BlueNMEA-2.1.3.apk',
-        'Hackerskeyboard-1.38.2':'https://f-droid.org/repo/org.pocketworkstation.pckeyboard_1038002.apk',
-        'Drivedroid-0.9.19':'http://softwarebakery.com/apps/drivedroid/files/drivedroid-free-0.9.19.apk',
+        'BlueNMEA':'http://max.kellermann.name/download/blue-nmea/BlueNMEA-2.1.3.apk',
+        'Hackerskeyboard':'https://f-droid.org/repo/org.pocketworkstation.pckeyboard_1038002.apk',
+        'Drivedroid':'http://softwarebakery.com/apps/drivedroid/files/drivedroid-free-0.9.29.apk',
         'USBKeyboard':'https://github.com/pelya/android-keyboard-gadget/raw/master/USB-Keyboard.apk',
         'RFAnalyzer':'https://github.com/demantz/RFAnalyzer/raw/master/RFAnalyzer.apk',
         'Shodan':'https://github.com/PaulSec/Shodan.io-mobile-app/raw/master/io.shodan.app.apk',
@@ -93,6 +98,12 @@ def allapps():
     try:
         for key, value in apps.iteritems():
             apkname = 'data/app/' + key + '.apk'
+
+            # For force redownload, remove previous APK
+            if checkforce:
+                if os.path.isfile(apkname):
+                    print('Force redownloading all apps')
+                    os.remove(apkname)
 
             if not os.path.isfile(apkname): # Check for existing apk download
                 print('Downloading ' + value + ' to ' + apkname)
@@ -295,14 +306,15 @@ def main():
     parser.add_argument('--noaroma', '-n', action='store_true', help='Use a generic updater-script instead of Aroma')
     parser.add_argument('--uninstaller', '-u', action='store_true', help='Create an uninstaller')
     parser.add_argument('--kernel', '-k', action='store_true', help='Build kernel only')
+    parser.add_argument('--release', '-r', action='store', help='Specify Nethunter release version')
 
     args = parser.parse_args()
 
     ######## FORCE DOWNLOAD ###########
     if args.forcedown:
-        supersu()
-        #supersuBeta()  # Enable this to downloaded latest supersu and comment above line
-        allapps()
+        #supersu(False)  # False = Release version of SuperSU
+        supersu(True)  # True - Beta version of SuperSU
+        allapps(True)
         exit(0) # https://github.com/offensive-security/kali-nethunter/issues/259 (unsure if I want to keep this)
 
     # Grab latestest SuperSU and all apps
@@ -373,7 +385,7 @@ def main():
                 shutil.copy2(sepolicy_location, 'ramdisk/sepolicy')
             else:
                 print('SEPOLICY not found at: %s' % sepolicy_location)
-                exit(0)
+                pass
 
         # Copy kernel from version/device to root folder
         kernel_location = 'kernels/' + version + '/' + device + '/zImage'
@@ -426,16 +438,16 @@ def main():
         exit(0)
 
     if os.path.isdir('supersu') and not suzipfile:
-        supersu()
+        supersu(True)
     elif not os.path.isdir('supersu') and not suzipfile:
         os.mkdir('supersu')
-        supersu()
+        supersu(True)
 
     if os.path.isdir('data/app'):
-        allapps()
+        allapps(False)
     elif not os.path.isdir('data/app'):
         os.mkdir('data/app')
-        allapps()
+        allapps(False)
 
     ####### Start AnyKernel2 installer ############
     zipfilename = 'anykernel2'
@@ -452,11 +464,15 @@ def main():
     ####### End AnyKernel2 installer ############
 
     ######## KERNEL ONLY ###########
-    kernelzip = 'kernel-nethunter-' + device + '-' + version + '-' + str(current_time) + '.zip'
+    if args.release:
+        kernelzip = 'kernel-nethunter-' + device + '-' + version + '-' + args.release + '.zip'
+    else:
+        kernelzip = 'kernel-nethunter-' + device + '-' + version + '-' + str(current_time) + '.zip'
 
     if args.kernel and args.device and version_picked:
         shutil.move('anykernel2.zip', kernelzip)  # Create kernel only here!
-        print('Created: %s.zip' % kernelzip)
+        print('Created: %s' % kernelzip)
+        cleanup()
         exit(0)
     elif args.kernel and not version_picked:
         print('Select a version: --kitkat, --lollipop, --marshmallow')
@@ -467,7 +483,6 @@ def main():
     else:
         os.makedirs('anykernelzip')
         shutil.move('anykernel2.zip', 'anykernelzip/anykernel2.zip')  # Continue with build!
-
 
     ####### Start No-Aroma Installer ############
     if args.noaroma:
@@ -484,7 +499,10 @@ def main():
     ###### End Aroma installer #########
 
     # Format for zip file is update-nethunter-devicename-version-DDMMYY_HHMMSS.zip
-    zipfilename = 'update-nethunter-' + device + '-' + version + '-' + str(current_time)
+    if args.release:
+        zipfilename = 'update-nethunter-' + device + '-' + version + '-' + args.release
+    else:
+        zipfilename = 'update-nethunter-' + device + '-' + version + '-' + str(current_time)
 
     zip('tmp_out', zipfilename, 'aroma')
 
