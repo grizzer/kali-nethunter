@@ -1,0 +1,1 @@
+../../../../share/pyshared/xlsxwriter/compat_collections.py

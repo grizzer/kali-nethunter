@@ -1,0 +1,1 @@
+../../../../../share/pyshared/watchdog/utils/unicode_paths.py

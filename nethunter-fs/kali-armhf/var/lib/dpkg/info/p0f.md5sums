@@ -1,0 +1,16 @@
+32adba304be159f1d85b286c5495b042  usr/bin/p0f
+fc77dc1fc62899569768d97f5c6617e7  usr/share/doc/p0f/COPYING.gz
+286eb4a8b8f229c67bfe3534a9d8baea  usr/share/doc/p0f/ChangeLog
+9d1abdc53b77d9f41309377cf527cc45  usr/share/doc/p0f/README.gz
+a4e7e274c067382394da6abeef5e6d67  usr/share/doc/p0f/TODO
+a7413db500d90befa115ae94cda5e5f5  usr/share/doc/p0f/changelog.Debian.gz
+d947559b470507f4ae4a6d21975fae95  usr/share/doc/p0f/changelog.gz
+61f4bc664fd8d5dce27b9167f518f412  usr/share/doc/p0f/copyright
+d02baf165b04b4ed96e8caf7405668b0  usr/share/doc/p0f/existential-notes.txt
+1f1f86e1fde83cad87abf295e89abdfa  usr/share/doc/p0f/extra-sigs.txt
+2c359f52425a783101370b11d35e662b  usr/share/p0f/README-TOOLS
+a61972256c6551cc0b39ca6bdf78b6e6  usr/share/p0f/p0f
+00763de7a7c4deea13b2c5a6441dd994  usr/share/p0f/p0f-client
+e72566d6d110d9e3f55ab10536a9a807  usr/share/p0f/p0f-sendsyn
+1748dbc7f8bb91775002f60f8a162a4a  usr/share/p0f/p0f-sendsyn6
+48cd5863c9c1c51e3dfa22a9c3da6ad5  usr/share/p0f/p0f.fp

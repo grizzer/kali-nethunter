@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libucl1
+/usr/share/doc/libucl1/TODO
+/usr/share/doc/libucl1/copyright
+/usr/share/doc/libucl1/README.gz
+/usr/share/doc/libucl1/changelog.gz
+/usr/share/doc/libucl1/changelog.Debian.gz
+/usr/share/doc/libucl1/THANKS
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libucl.so.1.0.0
+/usr/lib/arm-linux-gnueabihf/libucl.so.1

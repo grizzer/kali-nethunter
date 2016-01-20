@@ -1,0 +1,18 @@
+This package was debianized by Andrew Lau <netsnipe@users.sourceforge.net> on
+Wed, 29 Oct 2003 15:47:14 +1100.
+
+It was downloaded from <http://download.berlios.de/xfce-goodies/>
+
+Upstream Authors:
+	Benedikt Meurer	<benedikt.meurer@unix-ag.uni-siegen.de>
+© 2003 Bernhard Walle	<bernhard.walle@gmx.de>
+	Hendrik Scholz	<hscholz@raisdorf.net> (Wormulon code base)
+ 
+Copyright:
+ 
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, version 2 only.
+ 
+On Debian systems, the complete text of the GNU General Public License, Version
+2 can be found in the file /usr/share/common-licenses/GPL-2

@@ -1,0 +1,1 @@
+../../../../share/pyshared/watchdog/events.py

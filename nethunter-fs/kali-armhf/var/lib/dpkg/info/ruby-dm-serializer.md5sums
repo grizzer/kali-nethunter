@@ -1,0 +1,15 @@
+c881de86b6ca865ad3a415e62030b974  usr/lib/ruby/vendor_ruby/dm-serializer.rb
+799b659345765fc003b4fa207d7d250a  usr/lib/ruby/vendor_ruby/dm-serializer/common.rb
+78e5b3fa723f0176bb52d3c26c37a133  usr/lib/ruby/vendor_ruby/dm-serializer/to_csv.rb
+432e8c32e99df27a4fc53a80f6e32ba0  usr/lib/ruby/vendor_ruby/dm-serializer/to_json.rb
+a77a756305ffecf147f140d7a387681d  usr/lib/ruby/vendor_ruby/dm-serializer/to_xml.rb
+fe28bd10aba99270094c0acf73d49b05  usr/lib/ruby/vendor_ruby/dm-serializer/to_yaml.rb
+217b5e4ec3f47419a91df1a05f2a81ec  usr/lib/ruby/vendor_ruby/dm-serializer/xml.rb
+d39cd36c4212628788686b5189e09079  usr/lib/ruby/vendor_ruby/dm-serializer/xml/libxml.rb
+f53a88af87780d521c4493e247a37204  usr/lib/ruby/vendor_ruby/dm-serializer/xml/nokogiri.rb
+849fe6e5ae156b9854758f4e5e0146a0  usr/lib/ruby/vendor_ruby/dm-serializer/xml/rexml.rb
+c7ac1056e1b1063ed72f3ff10465c04b  usr/share/doc/ruby-dm-serializer/README.Debian
+6d7ed3ca5771d451669d77250970b020  usr/share/doc/ruby-dm-serializer/README.rdoc
+3667f048fdd98582dd9b32b442fd0e8c  usr/share/doc/ruby-dm-serializer/changelog.Debian.gz
+d071eadf29b2afff15887147a6c8a972  usr/share/doc/ruby-dm-serializer/copyright
+54decc74fd1f6ce51b5035358f94b2d5  usr/share/rubygems-integration/all/specifications/dm-serializer-1.2.2.gemspec

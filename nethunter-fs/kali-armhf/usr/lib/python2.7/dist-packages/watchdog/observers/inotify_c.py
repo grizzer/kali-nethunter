@@ -1,0 +1,1 @@
+../../../../../share/pyshared/watchdog/observers/inotify_c.py

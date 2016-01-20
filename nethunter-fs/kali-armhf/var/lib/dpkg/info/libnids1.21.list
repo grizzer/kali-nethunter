@@ -1,0 +1,10 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libnids.so.1.21
+/usr/share
+/usr/share/doc
+/usr/share/doc/libnids1.21
+/usr/share/doc/libnids1.21/copyright
+/usr/share/doc/libnids1.21/changelog.gz
+/usr/share/doc/libnids1.21/changelog.Debian.gz

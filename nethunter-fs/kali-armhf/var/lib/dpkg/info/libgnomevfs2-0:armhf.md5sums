@@ -1,0 +1,17 @@
+90582742483dbc721cd26a5d7b35cced  usr/lib/arm-linux-gnueabihf/gnome-vfs-2.0/modules/libcomputer.so
+781f50ff3ca1fbd80f416ab1cac55fb5  usr/lib/arm-linux-gnueabihf/gnome-vfs-2.0/modules/libdns-sd.so
+afc735ae6d3e4f639d5d6c7046666e6c  usr/lib/arm-linux-gnueabihf/gnome-vfs-2.0/modules/libfile.so
+d92605c1944f185efb434e9a67dc7eed  usr/lib/arm-linux-gnueabihf/gnome-vfs-2.0/modules/libgzip.so
+e8494200d4296bac5206432d1ebdb826  usr/lib/arm-linux-gnueabihf/gnome-vfs-2.0/modules/libnetwork.so
+63c5b123b6e922323fe5f40c6fe8daa4  usr/lib/arm-linux-gnueabihf/gnome-vfs-2.0/modules/libsftp.so
+0be92892f2e917de238ad9999a8fd48b  usr/lib/arm-linux-gnueabihf/gnome-vfs-2.0/modules/libtar.so
+d390d4d5f771444d8c8ab8720f480d2f  usr/lib/arm-linux-gnueabihf/gnome-vfs-2.0/modules/libvfs-test.so
+ed891db3307ab20fb5455195692aefe9  usr/lib/arm-linux-gnueabihf/libgnomevfs-2.so.0.2400.4
+5f795a393e6a398218e4679b7827e834  usr/share/doc/libgnomevfs2-0/AUTHORS
+0c08348fac24946b7eaf9539d01c4ef4  usr/share/doc/libgnomevfs2-0/NEWS.gz
+c8edd543f959766c0f9a1a5c59edc548  usr/share/doc/libgnomevfs2-0/README
+4e29670356c53960a6f3ca2507b51c3c  usr/share/doc/libgnomevfs2-0/TODO
+f335689a905cd20a72573d7fa4f6c998  usr/share/doc/libgnomevfs2-0/changelog.Debian.armhf.gz
+efa4229b6cfecf2b2498a92322203759  usr/share/doc/libgnomevfs2-0/changelog.Debian.gz
+d04743373d5963281769d7916150026a  usr/share/doc/libgnomevfs2-0/changelog.gz
+1ce196f7cadc5459ea5c78769b66e801  usr/share/doc/libgnomevfs2-0/copyright

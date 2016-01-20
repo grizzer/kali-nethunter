@@ -1,0 +1,15 @@
+f6316212d741add36cc9b949ff87e631  usr/lib/python2.7/dist-packages/hpack-1.1.0.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python2.7/dist-packages/hpack-1.1.0.egg-info/dependency_links.txt
+ad4ad219683a6ff8c94d4ddb3b37d402  usr/lib/python2.7/dist-packages/hpack-1.1.0.egg-info/top_level.txt
+2e3fe2c0b8eb57f6642855afa03608af  usr/lib/python2.7/dist-packages/hpack/__init__.py
+8c9eede7c115cab31a3d9b1e077bb5d9  usr/lib/python2.7/dist-packages/hpack/compat.py
+159db192db7f1f498e66e2f4041c0322  usr/lib/python2.7/dist-packages/hpack/exceptions.py
+51c660468297f98c2459928ec4f4725c  usr/lib/python2.7/dist-packages/hpack/hpack.py
+88add5214449b18a27511fdd5d87afb7  usr/lib/python2.7/dist-packages/hpack/hpack_compat.py
+d5a53c232122a2618ec0c83190c43250  usr/lib/python2.7/dist-packages/hpack/huffman.py
+366d8e9cd7618af4b55a9fdd2e551f60  usr/lib/python2.7/dist-packages/hpack/huffman_constants.py
+fafa9053e51b8fb4d69fa4a563b35c6f  usr/lib/python2.7/dist-packages/hpack/table.py
+9091616495a8416842bc7c26ced241df  usr/share/doc/python-hpack/README.rst
+14723fd0c4b36e180d0407cd87249331  usr/share/doc/python-hpack/changelog.Debian.gz
+189b8fd02fbd90690f162227fc496adb  usr/share/doc/python-hpack/changelog.gz
+7c8039760733ca87c408e1774c15aff4  usr/share/doc/python-hpack/copyright

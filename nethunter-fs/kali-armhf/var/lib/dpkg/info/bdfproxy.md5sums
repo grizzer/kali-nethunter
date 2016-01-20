@@ -1,0 +1,8 @@
+5a4c7ee61b54e041f3f14fa4171801ec  usr/bin/bdfproxy
+1214c108b9c18c2b5e9059049e5805f1  usr/share/bdfproxy/bdf_proxy.py
+7c43eb62425bec5a18691d95ef7f7447  usr/share/bdfproxy/test_script.sh
+9b184891a6d8db28416f02dda675de38  usr/share/bdfproxy/wpBDF.sh
+bbbb92c8f8ebceea3f5d6c0b884f30ec  usr/share/doc/bdfproxy/README.md
+eed84326e00e32a31360824cd8415f8b  usr/share/doc/bdfproxy/changelog.Debian.gz
+54b948b0e7d85ba345468a8f28bd1cf4  usr/share/doc/bdfproxy/copyright
+9bc8bcb314be553791e336a4eaa2a8b3  usr/share/python/runtime.d/bdfproxy.rtupdate

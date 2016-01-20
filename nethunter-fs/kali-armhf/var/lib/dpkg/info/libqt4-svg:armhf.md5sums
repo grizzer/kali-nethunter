@@ -1,0 +1,7 @@
+c60af74c85b8ff201baad2a0778c6d25  usr/lib/arm-linux-gnueabihf/libQtSvg.so.4.8.6
+f9fb6f0bbb9650a1ccd5db7895e708a9  usr/lib/arm-linux-gnueabihf/qt4/plugins/iconengines/libqsvgicon.so
+88ea1bda2e2846ccd7781a2b8b61bb28  usr/lib/arm-linux-gnueabihf/qt4/plugins/imageformats/libqsvg.so
+eb6c371255e1262c55ae9b652a90b528  usr/share/doc/libqt4-svg/LGPL_EXCEPTION.txt
+1aad410c5e3360bff07c858261ff92ba  usr/share/doc/libqt4-svg/changelog.Debian.gz
+d49cf542b1b3ba75bad90e9560c459d3  usr/share/doc/libqt4-svg/copyright
+754737721593bb14b976be608c52b5a6  usr/share/lintian/overrides/libqt4-svg

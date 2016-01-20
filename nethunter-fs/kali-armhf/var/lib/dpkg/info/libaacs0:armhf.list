@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libaacs0
+/usr/share/doc/libaacs0/changelog.gz
+/usr/share/doc/libaacs0/changelog.Debian.armhf.gz
+/usr/share/doc/libaacs0/changelog.Debian.gz
+/usr/share/doc/libaacs0/copyright
+/usr/share/doc/libaacs0/KEYDB.cfg.gz
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libaacs.so.0.4.1
+/usr/lib/arm-linux-gnueabihf/libaacs.so.0

@@ -1,0 +1,19 @@
+uTidyLib for Debian
+===================
+
+The debian package of uTidyLib does not include the API docs, however
+these can be easily generated using epydoc (package python-epydoc).
+Just run the following commands:
+
+$ export PYTHON_VERSION="2.3" # replace 2.3 with appropriate version
+$ export PACKAGES_HOME="/usr/lib/python$PYTHON_VERSION/site-packages/"
+$ export APIDOC_OUTPUT="python$PYTHON_VERSION-utidylib-apidoc"
+$ epydoc -o "$APIDOC_OUTPUT" $PACKAGES_HOME/tidy/error.py \
+                             $PACKAGES_HOME/tidy/lib.py \
+                             $PACKAGES_HOME/tidy/__init__.py
+
+You might also want to visit the project's homepage at
+http://utidylib.berlios.de/ for more details about the 
+usage of this library.
+
+-- Igor Stroh <jenner@debian.org>  Sun, 21 Aug 2005 10:18:04 +0200

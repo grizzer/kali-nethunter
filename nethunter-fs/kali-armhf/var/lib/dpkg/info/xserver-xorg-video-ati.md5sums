@@ -1,0 +1,7 @@
+98fa733bd53aae5e85dc5da571062628  usr/lib/xorg/modules/drivers/ati_drv.so
+addc2f00e39f08ad2bf8afda9172b3e0  usr/share/doc/xserver-xorg-video-ati/NEWS.Debian.gz
+8404ca0091e9b1811249db7bb70da967  usr/share/doc/xserver-xorg-video-ati/changelog.Debian.armhf.gz
+ec18dda946570832898dce15219e1ce6  usr/share/doc/xserver-xorg-video-ati/changelog.Debian.gz
+058048e78e737f03489a7a927d7f71f1  usr/share/doc/xserver-xorg-video-ati/changelog.gz
+75da66945980a43adf1e1856271b9d4a  usr/share/doc/xserver-xorg-video-ati/copyright
+462f81d5a685c402140ccd417bde22fe  usr/share/man/man4/ati.4.gz

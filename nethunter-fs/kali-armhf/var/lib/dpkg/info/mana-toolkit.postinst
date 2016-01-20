@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+    # Drop the old and unwanted file /etc/stunnel/mana-toolkit.conf
+    if dpkg --compare-versions "$2" lt-nl 0~20140915-0kalidev2; then
+        rm -f /etc/stunnel/mana-toolkit.conf
+    fi
+    # Disable diversion
+    if dpkg --compare-versions "$2" lt-nl 0~20150707-0kali2; then
+	rm -f /etc/apache2/sites-available/000-default.conf
+        dpkg-divert --rename --package mana-toolkit \
+                    --divert /etc/apache2/sites-available/000-default.conf.original \
+                    --remove /etc/apache2/sites-available/000-default.conf
+    fi
+    # Enable some apache config
+    a2enmod rewrite || true
+    a2dissite 000-default || true
+    for vhost in  000-mana-toolkit.conf accounts.google.conf apple.conf blackberry.conf facebook.conf gmail.com.conf google.conf secure-redirect.conf windows.conf; do
+	a2ensite $vhost || true
+    done
+fi
+
+

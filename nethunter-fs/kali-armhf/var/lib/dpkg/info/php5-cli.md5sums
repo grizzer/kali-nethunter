@@ -1,0 +1,8 @@
+a127ff55b72c687c646751bdb61932f1  usr/bin/phar
+10b6255716b86c7f8d4d24937c64666e  usr/bin/php5
+6ca595a320107e1109c4aee99cc18a0e  usr/share/bug/php5-cli/control
+1c0f2d9adb5daa00134611d8eed90cf6  usr/share/bug/php5-cli/script
+60d351cb682f6deac66bbdf2cb494ec9  usr/share/lintian/overrides/php5-cli
+ce003065eacafd05eac37c6e4243256c  usr/share/man/man1/phar.1.gz
+0699a1694060b5b257f10880ab4bdcde  usr/share/man/man1/php5.1.gz
+d41d8cd98f00b204e9800998ecf8427e  usr/share/php5/sapi/cli

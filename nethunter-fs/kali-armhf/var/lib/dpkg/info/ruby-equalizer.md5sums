@@ -1,0 +1,7 @@
+c36dfffc00b4289c87fa95df8315deb4  usr/lib/ruby/vendor_ruby/equalizer.rb
+e3668873bbc3c53f1481e7e6daa5b931  usr/lib/ruby/vendor_ruby/equalizer/version.rb
+c5bd23f9517f91427524b724f413f1c7  usr/share/doc/ruby-equalizer/README.md
+7aab98e831ba2865338daaf15e22f9b1  usr/share/doc/ruby-equalizer/changelog.Debian.gz
+1bc87ba1c32c0e1fa56929de9be0785e  usr/share/doc/ruby-equalizer/copyright
+54c4811f74e2ade39381f9893b2b4dd8  usr/share/lintian/overrides/ruby-equalizer
+af870247cbafaf92fee5fb39f47aef06  usr/share/rubygems-integration/all/specifications/equalizer-0.0.9.gemspec

@@ -1,0 +1,12 @@
+4309a9fa73cb08c64adadbbf757d7413  usr/lib/ruby/vendor_ruby/addressable/idna.rb
+f9d40ec4af28ffa6694048983f6c2ad1  usr/lib/ruby/vendor_ruby/addressable/idna/native.rb
+e5de0749c7ebb4737c442e4b2567b98e  usr/lib/ruby/vendor_ruby/addressable/idna/pure.rb
+6a613ce1b0ae7adb2184c83f340e3301  usr/lib/ruby/vendor_ruby/addressable/template.rb
+177b741b0cf78d6918294f42cf4d0b16  usr/lib/ruby/vendor_ruby/addressable/uri.rb
+3896b30243bd14db2a394c218a143036  usr/lib/ruby/vendor_ruby/addressable/version.rb
+eec4d5274547505ca97b1b5a95d2355c  usr/share/doc/ruby-addressable/README.md
+1e0579d12503aef51ee776ba877e4ee9  usr/share/doc/ruby-addressable/changelog.Debian.gz
+40c3606643d2e06217290ac0debd47d1  usr/share/doc/ruby-addressable/changelog.gz
+0258d2966d55e5f618a757e2253fccc0  usr/share/doc/ruby-addressable/copyright
+df2a5e2cf808673d4703ee3681201815  usr/share/ruby-addressable/unicode.data
+d1dccc5f86465c07a445dda7bfe996b2  usr/share/rubygems-integration/all/specifications/addressable-2.3.6.gemspec

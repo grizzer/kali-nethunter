@@ -1,0 +1,38 @@
+#!/bin/sh
+
+set -e
+
+update_files() {
+    for file in /etc/gdm3/daemon.conf /etc/pam.d/gdm-password \
+	        /etc/pam.d/gdm-autologin /etc/kde4/kdm/kdmrc; do
+	orig_file="/usr/share/kali-root-login/$(basename $file)"
+	# If file is missing or doesn't contain an indication that
+	# it's a version coming from us, then install our version
+	if [ ! -e $file ] || ! grep -q kali-root-login $file; then
+	    echo "Installing $orig_file as $file"
+	    cp $orig_file $file
+	fi
+    done
+}
+
+if [ "$1" = "triggered" ]; then
+    update_files
+    exit 0
+fi
+
+if [ "$1" = "configure" ]; then
+    if dpkg --compare-versions "$2" lt-nl 1.1; then
+	for file in /etc/pam.d/gdm3-autologin /etc/pam.d/gdm3 /etc/gdm3/greeter.gsettings; do
+	    rm -f $file
+	    dpkg-divert --rename --package kali-root-login \
+			--divert $file.original \
+			--remove $file
+	done
+	# Force update those two files, changes are needed for newer gdm
+	cp /usr/share/kali-root-login/gdm-password /etc/pam.d/gdm-password
+	cp /usr/share/kali-root-login/gdm-autologin /etc/pam.d/gdm-autologin
+    fi
+    update_files
+fi
+
+

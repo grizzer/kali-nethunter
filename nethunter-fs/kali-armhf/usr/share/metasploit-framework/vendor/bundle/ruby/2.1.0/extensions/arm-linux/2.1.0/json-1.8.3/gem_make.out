@@ -1,0 +1,16 @@
+/usr/bin/ruby2.1 extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/json-1.8.3/ext/json'
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/json-1.8.3/ext/json'
+
+make "DESTDIR="
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/json-1.8.3/ext/json'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/json-1.8.3/ext/json'
+
+make "DESTDIR=" install
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/json-1.8.3/ext/json'
+installing default libraries
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/json-1.8.3/ext/json'

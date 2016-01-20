@@ -1,0 +1,126 @@
+#!/usr/bin/ruby
+
+# Copyright (c) 2010, 2011 Samuel G. D. Williams. <http://www.oriontransfer.co.nz>
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+require 'rubygems'
+
+require 'rexec'
+require 'optparse'
+
+OPTIONS = {
+	:out => "/tmp/daemon-exec.log",
+	:err => "/tmp/daemon-exec-error.log",
+	:in => "/dev/null",
+	:print_pid => false,
+	:root => "/",
+	:verbose => false,
+	:relocate => true,
+	:read_stdin => false,
+}
+
+ARGV.options do |o|
+	script_name = File.basename($0)
+
+	o.set_summary_indent("\t")
+	o.banner = "Usage: #{script_name} [-I stdin] [-O stdout] [-E stderr] [script/stdin]"
+	o.define_head "Copyright (c) 2010 Samuel Williams <http://www.oriontransfer.co.nz/>."
+
+	o.on("-d [dir]", String, "Daemons working path, default /") do |dir|
+		OPTIONS[:root] = dir
+	end
+	
+	o.on("-s", "Don't attempt to relocate arguments to absolute paths") do
+		OPTIONS[:relocate] = false
+	end
+
+	o.define "File / Pipe Options:"
+
+	o.on("-I [path]", String, "File for STDIN, defaults to #{OPTIONS[:in]}") do |path|
+		OPTIONS[:in] = path
+	end
+	
+	o.on("--stdin", "Read from current STDIN to daemon process.") do
+		OPTIONS[:in] = "-"
+	end
+	
+	o.on("-O [path]", String, "File for STDOUT, defaults to #{OPTIONS[:out]}") do |path|
+		OPTIONS[:out] = path
+	end
+	
+	o.on("-E [path]", String, "File for STDERR, defaults to #{OPTIONS[:err]}") do |path|
+		OPTIONS[:err] = path
+	end
+	
+	o.define "Misc Options:"
+	
+	o.on("-p", "Print out the PID of the forked process") do
+		OPTIONS[:print_pid] = true
+	end
+	
+	o.on("-V", "Print verbose information about what is going on") do
+		OPTIONS[:verbose] = true
+	end
+	
+	o.on("-h", "Show this help/version information and exit") do
+		puts o
+		exit 0
+	end
+end.parse!
+
+if OPTIONS[:relocate]
+	ARGV.collect! do |value|
+		if File.exist?(value)
+			File.expand_path(value)
+		else
+			value
+		end
+	end
+
+	[:in, :out, :err].each do |path|
+		OPTIONS[path] = File.expand_path(OPTIONS[path]) if File.exist?(OPTIONS[path])
+	end
+end
+
+if OPTIONS[:verbose]
+	puts "Running #{ARGV.inspect}"
+end
+
+task_options = {
+	:daemonize => true,
+	:out => File.open(OPTIONS[:out], "a"),
+	:err => File.open(OPTIONS[:err], "a")
+}
+
+if OPTIONS[:in] == '-'
+	task_options[:passthrough] = [:in]
+end
+
+daemon = lambda do
+	Dir.chdir(OPTIONS[:root])
+	system("env", *ARGV)
+end
+
+task = RExec::Task.open(daemon, task_options)
+
+if OPTIONS[:print_pid]
+	puts task.pid
+end
+

@@ -1,0 +1,12 @@
+0b1a58a66a470042af8e49ac81e1f126  usr/lib/arm-linux-gnueabihf/ruby/vendor_ruby/2.1.0/oj.so
+ecf8342fa90c142139e9bca7d2f6f52e  usr/lib/ruby/vendor_ruby/oj.rb
+5757eccad71e3e2476cfc9114529cd8e  usr/lib/ruby/vendor_ruby/oj/bag.rb
+5d7148d6158a7e9eb849e73429d27c1a  usr/lib/ruby/vendor_ruby/oj/error.rb
+fd7d47037f8ac6912d5cfb3bd05d72fc  usr/lib/ruby/vendor_ruby/oj/mimic.rb
+930ffaee7a07a540008f9de2a7304ca6  usr/lib/ruby/vendor_ruby/oj/saj.rb
+d0d126f1d664aa4309e47318a75316da  usr/lib/ruby/vendor_ruby/oj/schandler.rb
+0442b696a187432248acab1cead4ca5f  usr/lib/ruby/vendor_ruby/oj/version.rb
+cbcfc6b7a7eb9f5d10b85436ff13940f  usr/share/doc/ruby-oj/README.md.gz
+7a128db8739ed0ea2e418ea94d392199  usr/share/doc/ruby-oj/changelog.Debian.gz
+b1f4f96635dc7aed04fd7a6cc079a5b5  usr/share/doc/ruby-oj/copyright
+0e9e7fd70e9dd8fd2dc7f3b8a87e591f  usr/share/rubygems-integration/2.1/specifications/oj-2.10.3.gemspec

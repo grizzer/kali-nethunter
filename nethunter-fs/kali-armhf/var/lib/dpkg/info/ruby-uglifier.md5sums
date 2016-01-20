@@ -1,0 +1,10 @@
+7fd6fd247688ffd2c0e237076111a7a9  usr/lib/ruby/vendor_ruby/uglifier.rb
+15ad11752c1ed55260f7028196c5ec46  usr/lib/ruby/vendor_ruby/uglifier/version.rb
+6ed99e4bb58a210862384e0665d8e176  usr/share/doc/ruby-uglifier/README.md.gz
+e125f2251fee4b26bd92a9abb8505917  usr/share/doc/ruby-uglifier/changelog.Debian.gz
+13fab4e3cd0405a0a4d6be4d9a525b14  usr/share/doc/ruby-uglifier/changelog.gz
+325e1261edbfcd3dd9544a8148af1c4d  usr/share/doc/ruby-uglifier/copyright
+ebe9b888872281d31a87cd48e6ffaa7c  usr/share/javascript/ruby-uglifier/es5.js
+db9590119d055d9e60b841e257ff67d1  usr/share/javascript/ruby-uglifier/split.js
+74159f12238926afea6304651a1a933e  usr/share/javascript/ruby-uglifier/uglify.js
+88fab314b24c326667241ae391a0e2b9  usr/share/rubygems-integration/all/specifications/uglifier-2.5.3.gemspec

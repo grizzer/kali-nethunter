@@ -1,0 +1,10 @@
+750de2e491f48bddf7590544fa49e2f1  usr/lib/arm-linux-gnueabihf/ruby/vendor_ruby/2.1.0/do_sqlite3/do_sqlite3.so
+dde700410383e6ae3fe4b3dbacf810d8  usr/lib/ruby/vendor_ruby/do_sqlite3.rb
+2962bdab2a9f94d085a0b18e1018928f  usr/lib/ruby/vendor_ruby/do_sqlite3/transaction.rb
+1c961034d0c0e523a968630f2807b40c  usr/lib/ruby/vendor_ruby/do_sqlite3/version.rb
+4298a1f0201e7f9c1f9de1dd2524559c  usr/share/doc/ruby-dataobjects-sqlite3/README.markdown
+9e038457e04c1ff3613f58274ad222c6  usr/share/doc/ruby-dataobjects-sqlite3/changelog.Debian.armhf.gz
+aaeb8cf1604b306600d6956a18bb37e0  usr/share/doc/ruby-dataobjects-sqlite3/changelog.Debian.gz
+ecd76580aac72c824f9a29e9fa6089ff  usr/share/doc/ruby-dataobjects-sqlite3/changelog.gz
+bb362033168b724371c65fb7b292495e  usr/share/doc/ruby-dataobjects-sqlite3/copyright
+c90afab930575ff01e4fd46cd622f342  usr/share/rubygems-integration/2.1/specifications/do_sqlite3-0.10.14.gemspec

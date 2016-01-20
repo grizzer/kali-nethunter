@@ -1,0 +1,15 @@
+90341f198fd6e32f7f1ae79a603c7f93  lib/systemd/system/gpsd.service
+a9e65147a259176b859532ea798b1774  lib/systemd/system/gpsd.socket
+d69cf6cf6730f7d4e9ed9f64be195fd2  lib/systemd/system/gpsdctl@.service
+962d6b9492c0c0557cd44447507fce45  lib/udev/rules.d/60-gpsd.rules
+7c1f2e5284b268fef4a03f7fe0911c4d  usr/sbin/gpsd
+a5d95eff196f7c8a63d1403679d81dc6  usr/sbin/gpsdctl
+20370dff9fd75fb252fb5d4b20843e8f  usr/share/doc/gpsd/README.gz
+821a936938d2a4b89aa5dca0de369e8c  usr/share/doc/gpsd/TODO.gz
+ffac88eadcc788c7259f3a571ec06cca  usr/share/doc/gpsd/TROUBLESHOOTING.gz
+107f10b38a9bb3eb09489600f4753608  usr/share/doc/gpsd/changelog.Debian.gz
+dd82452b0540052312ea63ceed768cb8  usr/share/doc/gpsd/changelog.gz
+3e37119e77a4f5c07421e3c6186ccec6  usr/share/doc/gpsd/copyright
+f4fd4c8f749025b96a2d9d2c9ef5f142  usr/share/man/man8/gpsd.8.gz
+9ca0c285ff97c5aa821b31c12298d0e5  usr/share/man/man8/gpsdctl.8.gz
+03d21ac3cb9e5d3b492da97076976959  usr/share/man/man8/gpsinit.8.gz

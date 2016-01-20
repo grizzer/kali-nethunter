@@ -1,0 +1,12 @@
+tinyproxy for Debian
+----------------------
+
+This is a Debianized version of Tinyproxy, a lightweight, non-caching,
+optionally anonymizing HTTP proxy.
+
+Note: While older versions of tinyproxy relied on commanline arguments
+for its parameters, recent versions of tinyproxy maintain a configuration
+file in /etc/tinyproxy/tinyproxy.conf, where anonymization, ports, etc.,
+are specified.
+
+ -- Ed Boraas <ed@debian.org>, Sun, 13 Jun 1999 02:40:21 -0600

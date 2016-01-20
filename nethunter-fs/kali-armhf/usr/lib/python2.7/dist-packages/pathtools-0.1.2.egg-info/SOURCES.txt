@@ -1,0 +1,1 @@
+../../../../share/pyshared/pathtools-0.1.2.egg-info/SOURCES.txt

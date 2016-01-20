@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>watchdog.utils.dirsnapshot &mdash; watchdog 0.7.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.7.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="watchdog 0.7.0 documentation" href="../../../index.html" />
+    <link rel="up" title="watchdog.utils" href="../utils.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../../index.html">watchdog 0.7.0 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >Module code</a> &raquo;</li>
+          <li><a href="../utils.html" accesskey="U">watchdog.utils</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for watchdog.utils.dirsnapshot</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/env python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="c">#</span>
+<span class="c"># Copyright 2011 Yesudeep Mangalapilly &lt;yesudeep@gmail.com&gt;</span>
+<span class="c"># Copyright 2012 Google, Inc.</span>
+<span class="c">#</span>
+<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c"># you may not use this file except in compliance with the License.</span>
+<span class="c"># You may obtain a copy of the License at</span>
+<span class="c">#</span>
+<span class="c">#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c">#</span>
+<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c"># See the License for the specific language governing permissions and</span>
+<span class="c"># limitations under the License.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">:module: watchdog.utils.dirsnapshot</span>
+<span class="sd">:synopsis: Directory snapshots and comparison.</span>
+<span class="sd">:author: yesudeep@google.com (Yesudeep Mangalapilly)</span>
+
+<span class="sd">.. ADMONITION:: Where are the moved events? They &#39;disappeared&#39;</span>
+
+<span class="sd">        This implementation does not take partition boundaries</span>
+<span class="sd">        into consideration. It will only work when the directory</span>
+<span class="sd">        tree is entirely on the same file system. More specifically,</span>
+<span class="sd">        any part of the code that depends on inode numbers can</span>
+<span class="sd">        break if partition boundaries are crossed. In these cases,</span>
+<span class="sd">        the snapshot diff will represent file/directory movement as</span>
+<span class="sd">        created and deleted events.</span>
+
+<span class="sd">        Windows does not have any concept of ``inodes``, which prevents</span>
+<span class="sd">        this snapshotter from determining file or directory renames/movement</span>
+<span class="sd">        on it. The snapshotter does not try to handle this on Windows.</span>
+<span class="sd">        File or directory movement will show up as creation and deletion</span>
+<span class="sd">        events.</span>
+
+<span class="sd">        Please do not use this on a virtual file system mapped to</span>
+<span class="sd">        a network share.</span>
+
+<span class="sd">Classes</span>
+<span class="sd">-------</span>
+<span class="sd">.. autoclass:: DirectorySnapshot</span>
+<span class="sd">   :members:</span>
+<span class="sd">   :show-inheritance:</span>
+
+<span class="sd">.. autoclass:: DirectorySnapshotDiff</span>
+<span class="sd">   :members:</span>
+<span class="sd">   :show-inheritance:</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">stat</span>
+
+<span class="kn">from</span> <span class="nn">pathtools.path</span> <span class="kn">import</span> <span class="n">walk</span> <span class="k">as</span> <span class="n">path_walk</span><span class="p">,</span> <span class="n">absolute_path</span>
+
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">watchdog.utils.bricks</span> <span class="kn">import</span> <span class="n">OrderedSet</span> <span class="k">as</span> <span class="nb">set</span>
+
+
+<div class="viewcode-block" id="DirectorySnapshotDiff"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshotDiff">[docs]</a><span class="k">class</span> <span class="nc">DirectorySnapshotDiff</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compares two directory snapshots and creates an object that represents</span>
+<span class="sd">    the difference between the two snapshots.</span>
+
+<span class="sd">    :param ref_dirsnap:</span>
+<span class="sd">        The reference directory snapshot.</span>
+<span class="sd">    :type ref_dirsnap:</span>
+<span class="sd">        :class:`DirectorySnapshot`</span>
+<span class="sd">    :param dirsnap:</span>
+<span class="sd">        The directory snapshot which will be compared</span>
+<span class="sd">        with the reference snapshot.</span>
+<span class="sd">    :type dirsnap:</span>
+<span class="sd">        :class:`DirectorySnapshot`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref_dirsnap</span><span class="p">,</span> <span class="n">dirsnap</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_files_deleted</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_files_modified</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_files_created</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_files_moved</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_modified</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_moved</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_deleted</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_created</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+        <span class="n">paths_moved_from_not_deleted</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">paths_deleted</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">paths_created</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="c"># Detect modifications and distinguish modifications that are actually</span>
+        <span class="c"># renames of files on top of existing file names (OS X/Linux only)</span>
+        <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">stat_info</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">dirsnap</span><span class="o">.</span><span class="n">stat_snapshot</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">ref_dirsnap</span><span class="o">.</span><span class="n">stat_snapshot</span><span class="p">:</span>
+                <span class="n">ref_stat_info</span> <span class="o">=</span> <span class="n">ref_dirsnap</span><span class="o">.</span><span class="n">stat_info</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">stat_info</span><span class="o">.</span><span class="n">st_ino</span> <span class="o">==</span> <span class="n">ref_stat_info</span><span class="o">.</span><span class="n">st_ino</span> <span class="ow">and</span> <span class="n">stat_info</span><span class="o">.</span><span class="n">st_mtime</span> <span class="o">!=</span> <span class="n">ref_stat_info</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">stat</span><span class="o">.</span><span class="n">S_ISDIR</span><span class="p">(</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_mode</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_modified</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_files_modified</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">stat_info</span><span class="o">.</span><span class="n">st_ino</span> <span class="o">!=</span> <span class="n">ref_stat_info</span><span class="o">.</span><span class="n">st_ino</span><span class="p">:</span>
+                    <span class="c"># Same path exists... but different inode</span>
+                    <span class="k">if</span> <span class="n">ref_dirsnap</span><span class="o">.</span><span class="n">has_inode</span><span class="p">(</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_ino</span><span class="p">):</span>
+                        <span class="n">old_path</span> <span class="o">=</span> <span class="n">ref_dirsnap</span><span class="o">.</span><span class="n">path_for_inode</span><span class="p">(</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_ino</span><span class="p">)</span>
+                        <span class="n">paths_moved_from_not_deleted</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">old_path</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">stat</span><span class="o">.</span><span class="n">S_ISDIR</span><span class="p">(</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_mode</span><span class="p">):</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_moved</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">old_path</span><span class="p">,</span> <span class="n">path</span><span class="p">))</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_files_moved</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">old_path</span><span class="p">,</span> <span class="n">path</span><span class="p">))</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c"># we have a newly created item with existing name, but different inode</span>
+                        <span class="n">paths_deleted</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+                        <span class="n">paths_created</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="n">paths_deleted</span> <span class="o">=</span> <span class="n">paths_deleted</span> <span class="o">|</span> <span class="p">(</span>
+            <span class="p">(</span><span class="n">ref_dirsnap</span><span class="o">.</span><span class="n">paths</span> <span class="o">-</span> <span class="n">dirsnap</span><span class="o">.</span><span class="n">paths</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">paths_moved_from_not_deleted</span><span class="p">))</span>
+        <span class="n">paths_created</span> <span class="o">=</span> <span class="n">paths_created</span> <span class="o">|</span> <span class="p">(</span><span class="n">dirsnap</span><span class="o">.</span><span class="n">paths</span> <span class="o">-</span> <span class="n">ref_dirsnap</span><span class="o">.</span><span class="n">paths</span><span class="p">)</span>
+
+        <span class="c"># Detect all the moves/renames except for atomic renames on top of existing files</span>
+        <span class="c"># that are handled in the file modification check for-loop above</span>
+        <span class="c"># Doesn&#39;t work on Windows since st_ino is always 0, so exclude on Windows.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;win&#39;</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">created_path</span> <span class="ow">in</span> <span class="n">paths_created</span><span class="p">:</span>
+                <span class="n">created_stat_info</span> <span class="o">=</span> <span class="n">dirsnap</span><span class="o">.</span><span class="n">stat_info</span><span class="p">(</span><span class="n">created_path</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">deleted_path</span> <span class="ow">in</span> <span class="n">paths_deleted</span><span class="p">:</span>
+                    <span class="n">deleted_stat_info</span> <span class="o">=</span> <span class="n">ref_dirsnap</span><span class="o">.</span><span class="n">stat_info</span><span class="p">(</span><span class="n">deleted_path</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">created_stat_info</span><span class="o">.</span><span class="n">st_ino</span> <span class="o">==</span> <span class="n">deleted_stat_info</span><span class="o">.</span><span class="n">st_ino</span><span class="p">:</span>
+                        <span class="n">paths_deleted</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">deleted_path</span><span class="p">)</span>
+                        <span class="n">paths_created</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">created_path</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">stat</span><span class="o">.</span><span class="n">S_ISDIR</span><span class="p">(</span><span class="n">created_stat_info</span><span class="o">.</span><span class="n">st_mode</span><span class="p">):</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_moved</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">deleted_path</span><span class="p">,</span> <span class="n">created_path</span><span class="p">))</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_files_moved</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">deleted_path</span><span class="p">,</span> <span class="n">created_path</span><span class="p">))</span>
+
+        <span class="c"># Now that we have renames out of the way, enlist the deleted and</span>
+        <span class="c"># created files/directories.</span>
+        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">paths_deleted</span><span class="p">:</span>
+            <span class="n">stat_info</span> <span class="o">=</span> <span class="n">ref_dirsnap</span><span class="o">.</span><span class="n">stat_info</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">stat</span><span class="o">.</span><span class="n">S_ISDIR</span><span class="p">(</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_mode</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_deleted</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_files_deleted</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">paths_created</span><span class="p">:</span>
+            <span class="n">stat_info</span> <span class="o">=</span> <span class="n">dirsnap</span><span class="o">.</span><span class="n">stat_info</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">stat</span><span class="o">.</span><span class="n">S_ISDIR</span><span class="p">(</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_mode</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_created</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_files_created</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshotDiff.files_created"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_created">[docs]</a>    <span class="k">def</span> <span class="nf">files_created</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of files that were created.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_files_created</span>
+</div>
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshotDiff.files_deleted"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_deleted">[docs]</a>    <span class="k">def</span> <span class="nf">files_deleted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of files that were deleted.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_files_deleted</span>
+</div>
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshotDiff.files_modified"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_modified">[docs]</a>    <span class="k">def</span> <span class="nf">files_modified</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of files that were modified.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_files_modified</span>
+</div>
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshotDiff.files_moved"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_moved">[docs]</a>    <span class="k">def</span> <span class="nf">files_moved</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List of files that were moved.</span>
+
+<span class="sd">        Each event is a two-tuple the first item of which is the path</span>
+<span class="sd">        that has been renamed to the second item in the tuple.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_files_moved</span>
+</div>
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshotDiff.dirs_modified"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_modified">[docs]</a>    <span class="k">def</span> <span class="nf">dirs_modified</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List of directories that were modified.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_modified</span>
+</div>
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshotDiff.dirs_moved"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_moved">[docs]</a>    <span class="k">def</span> <span class="nf">dirs_moved</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List of directories that were moved.</span>
+
+<span class="sd">        Each event is a two-tuple the first item of which is the path</span>
+<span class="sd">        that has been renamed to the second item in the tuple.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_moved</span>
+</div>
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshotDiff.dirs_deleted"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_deleted">[docs]</a>    <span class="k">def</span> <span class="nf">dirs_deleted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List of directories that were deleted.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_deleted</span>
+</div>
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshotDiff.dirs_created"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_created">[docs]</a>    <span class="k">def</span> <span class="nf">dirs_created</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List of directories that were created.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dirs_created</span>
+
+</div></div>
+<div class="viewcode-block" id="DirectorySnapshot"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshot">[docs]</a><span class="k">class</span> <span class="nc">DirectorySnapshot</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A snapshot of stat information of files in a directory.</span>
+
+<span class="sd">    :param path:</span>
+<span class="sd">        The directory path for which a snapshot should be taken.</span>
+<span class="sd">    :type path:</span>
+<span class="sd">        ``str``</span>
+<span class="sd">    :param recursive:</span>
+<span class="sd">        ``True`` if the entired directory tree should be included in the</span>
+<span class="sd">        snapshot; ``False`` otherwise.</span>
+<span class="sd">    :type recursive:</span>
+<span class="sd">        ``bool``</span>
+<span class="sd">    :param walker_callback:</span>
+<span class="sd">        A function with the signature ``walker_callback(path, stat_info)``</span>
+<span class="sd">        which will be called for every entry in the directory tree.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">path</span><span class="p">,</span>
+                 <span class="n">recursive</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                 <span class="n">walker_callback</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="bp">None</span><span class="p">),</span>
+                 <span class="n">_copying</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">absolute_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stat_snapshot</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_inode_to_path</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_recursive</span> <span class="o">=</span> <span class="n">recursive</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_copying</span><span class="p">:</span>
+            <span class="n">stat_info</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_stat_snapshot</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="p">]</span> <span class="o">=</span> <span class="n">stat_info</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_inode_to_path</span><span class="p">[</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_ino</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
+            <span class="n">walker_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="p">,</span> <span class="n">stat_info</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">directories</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">path_walk</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="p">,</span> <span class="n">recursive</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">directory_name</span> <span class="ow">in</span> <span class="n">directories</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">directory_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">directory_name</span><span class="p">)</span>
+                        <span class="n">stat_info</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">directory_path</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_stat_snapshot</span><span class="p">[</span><span class="n">directory_path</span><span class="p">]</span> <span class="o">=</span> <span class="n">stat_info</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_inode_to_path</span><span class="p">[</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_ino</span><span class="p">]</span> <span class="o">=</span> <span class="n">directory_path</span>
+                        <span class="n">walker_callback</span><span class="p">(</span><span class="n">directory_path</span><span class="p">,</span> <span class="n">stat_info</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+                        <span class="k">continue</span>
+
+                <span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+                        <span class="n">stat_info</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_stat_snapshot</span><span class="p">[</span><span class="n">file_path</span><span class="p">]</span> <span class="o">=</span> <span class="n">stat_info</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_inode_to_path</span><span class="p">[</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_ino</span><span class="p">]</span> <span class="o">=</span> <span class="n">file_path</span>
+                        <span class="n">walker_callback</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">stat_info</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+                        <span class="k">continue</span>
+
+    <span class="k">def</span> <span class="nf">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">previous_dirsnap</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Allow subtracting a DirectorySnapshot object instance from</span>
+<span class="sd">        another.</span>
+
+<span class="sd">        :returns:</span>
+<span class="sd">            A :class:`DirectorySnapshotDiff` object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">DirectorySnapshotDiff</span><span class="p">(</span><span class="n">previous_dirsnap</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+
+    <span class="c"># def __add__(self, new_dirsnap):</span>
+    <span class="c">#    self._stat_snapshot.update(new_dirsnap._stat_snapshot)</span>
+
+    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">from_pathname</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">snapshot</span> <span class="o">=</span> <span class="n">DirectorySnapshot</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">from_pathname</span><span class="p">,</span>
+                                     <span class="n">recursive</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">is_recursive</span><span class="p">,</span>
+                                     <span class="n">_copying</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">pathname</span><span class="p">,</span> <span class="n">stat_info</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_stat_snapshot</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">pathname</span><span class="o">.</span><span class="n">starts_with</span><span class="p">(</span><span class="n">from_pathname</span><span class="p">):</span>
+                <span class="n">snapshot</span><span class="o">.</span><span class="n">_stat_snapshot</span><span class="p">[</span><span class="n">pathname</span><span class="p">]</span> <span class="o">=</span> <span class="n">stat_info</span>
+                <span class="n">snapshot</span><span class="o">.</span><span class="n">_inode_to_path</span><span class="p">[</span><span class="n">stat_info</span><span class="o">.</span><span class="n">st_ino</span><span class="p">]</span> <span class="o">=</span> <span class="n">pathname</span>
+        <span class="k">return</span> <span class="n">snapshot</span>
+
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshot.stat_snapshot"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshot.stat_snapshot">[docs]</a>    <span class="k">def</span> <span class="nf">stat_snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a dictionary of stat information with file paths being keys.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stat_snapshot</span>
+</div>
+<div class="viewcode-block" id="DirectorySnapshot.stat_info"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshot.stat_info">[docs]</a>    <span class="k">def</span> <span class="nf">stat_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a stat information object for the specified path from</span>
+<span class="sd">        the snapshot.</span>
+
+<span class="sd">        :param path:</span>
+<span class="sd">            The path for which stat information should be obtained</span>
+<span class="sd">            from a snapshot.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stat_snapshot</span><span class="p">[</span><span class="n">path</span><span class="p">]</span>
+</div>
+<div class="viewcode-block" id="DirectorySnapshot.path_for_inode"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshot.path_for_inode">[docs]</a>    <span class="k">def</span> <span class="nf">path_for_inode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inode</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines the path that an inode represents in a snapshot.</span>
+
+<span class="sd">        :param inode:</span>
+<span class="sd">            inode number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inode_to_path</span><span class="p">[</span><span class="n">inode</span><span class="p">]</span>
+</div>
+<div class="viewcode-block" id="DirectorySnapshot.has_inode"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshot.has_inode">[docs]</a>    <span class="k">def</span> <span class="nf">has_inode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inode</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines if the inode exists.</span>
+
+<span class="sd">        :param inode:</span>
+<span class="sd">            inode number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">inode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inode_to_path</span>
+</div>
+<div class="viewcode-block" id="DirectorySnapshot.stat_info_for_inode"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshot.stat_info_for_inode">[docs]</a>    <span class="k">def</span> <span class="nf">stat_info_for_inode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inode</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines stat information for a given inode.</span>
+
+<span class="sd">        :param inode:</span>
+<span class="sd">            inode number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stat_info</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path_for_inode</span><span class="p">(</span><span class="n">inode</span><span class="p">))</span>
+</div>
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="DirectorySnapshot.paths"><a class="viewcode-back" href="../../../api.html#watchdog.utils.dirsnapshot.DirectorySnapshot.paths">[docs]</a>    <span class="k">def</span> <span class="nf">paths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List of file/directory paths in the snapshot.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_stat_snapshot</span><span class="p">)</span>
+</div>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__repr__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_stat_snapshot</span><span class="p">)</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../../index.html">watchdog 0.7.0 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >Module code</a> &raquo;</li>
+          <li><a href="../utils.html" >watchdog.utils</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2010, Yesudeep Mangalapilly.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

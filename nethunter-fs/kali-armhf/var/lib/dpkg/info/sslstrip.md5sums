@@ -1,0 +1,17 @@
+295be22d9273afe40f848f881b188f7b  usr/share/doc/sslstrip/README
+121078384052dfba7656fe0f1b4b4f09  usr/share/doc/sslstrip/changelog.Debian.gz
+6609985b809bb2d0974a9cbe3d5fdc8d  usr/share/doc/sslstrip/copyright
+ff56c69a5b3ce6ad0f3614ba292b90f0  usr/share/man/man1/sslstrip.1.gz
+886d2aa3e0fc5ca62766004261b99b76  usr/share/python/runtime.d/sslstrip.rtupdate
+70625a6e60529a85cc51ad7da2d5580d  usr/share/sslstrip/lock.ico
+66ba63a20b83ee24a377e3207adb9c06  usr/share/sslstrip/sslstrip-0.9.egg-info
+c6bcf990d70286afca9da154367d9704  usr/share/sslstrip/sslstrip.py
+7e9a6a388a8b52d4d4f3a3fe7f0a41ad  usr/share/sslstrip/sslstrip/ClientRequest.py
+e3b52e47322291717582d165d743de80  usr/share/sslstrip/sslstrip/CookieCleaner.py
+025891aa4fd1ab25737c5cac663fa5ce  usr/share/sslstrip/sslstrip/DnsCache.py
+37970c713e3d2cba2ac4533eeb40f7eb  usr/share/sslstrip/sslstrip/SSLServerConnection.py
+e912589526a369894e38700fcf193cc7  usr/share/sslstrip/sslstrip/ServerConnection.py
+a3549e7f44c90cc4e3f0c8147a78396a  usr/share/sslstrip/sslstrip/ServerConnectionFactory.py
+aa3739818967741fdd6fc53f79e014f9  usr/share/sslstrip/sslstrip/StrippingProxy.py
+e2cd3d98e559d4e6a9d03b0b31c2e637  usr/share/sslstrip/sslstrip/URLMonitor.py
+d41d8cd98f00b204e9800998ecf8427e  usr/share/sslstrip/sslstrip/__init__.py

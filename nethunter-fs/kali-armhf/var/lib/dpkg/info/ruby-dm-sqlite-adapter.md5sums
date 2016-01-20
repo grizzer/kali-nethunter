@@ -1,0 +1,6 @@
+c5c1b91d6812d3a3f836cce623ab5668  usr/lib/ruby/vendor_ruby/dm-sqlite-adapter.rb
+89ef864041a4e2dd67a0884f0161046b  usr/lib/ruby/vendor_ruby/dm-sqlite-adapter/adapter.rb
+999c5647f0b39e5f3c34eea086deb013  usr/lib/ruby/vendor_ruby/dm-sqlite-adapter/spec/setup.rb
+95b1999584085cabf059b1118688d13e  usr/share/doc/ruby-dm-sqlite-adapter/changelog.Debian.gz
+371c9ec366316d44dc4d4bc8dc749273  usr/share/doc/ruby-dm-sqlite-adapter/copyright
+572e3a8141e43925e9048dffa1a8c06d  usr/share/rubygems-integration/all/specifications/dm-sqlite-adapter-1.2.0.gemspec

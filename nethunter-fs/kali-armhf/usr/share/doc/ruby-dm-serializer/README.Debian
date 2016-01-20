@@ -1,0 +1,6 @@
+ruby-dm-serializer for Debian
+
+As ruby-fastercsv is not in debian from jessie, not maintained upstream
+and not necessary for beef-xss, the dependency on ruby-fastercsv is
+dropped. The to_csv.rb will not work unless you install manually
+ruby-fastercsv.

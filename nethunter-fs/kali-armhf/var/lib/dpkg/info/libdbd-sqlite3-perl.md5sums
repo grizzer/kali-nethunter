@@ -1,0 +1,17 @@
+26324c7c74dc360d916265779da65c3c  usr/lib/arm-linux-gnueabihf/perl5/5.20/DBD/SQLite.pm
+cef89676e87372ab3e2073f2e075e422  usr/lib/arm-linux-gnueabihf/perl5/5.20/DBD/SQLite/Cookbook.pod
+b68f627867ff099b0f55cd592c6b852a  usr/lib/arm-linux-gnueabihf/perl5/5.20/DBD/SQLite/Fulltext_search.pod
+d37d783068b7cff9c3bdfb6c81e2e073  usr/lib/arm-linux-gnueabihf/perl5/5.20/DBD/SQLite/VirtualTable.pm
+56482d17a5cc55a6985e098c40b786af  usr/lib/arm-linux-gnueabihf/perl5/5.20/DBD/SQLite/VirtualTable/FileContent.pm
+8bc3f0e02ab46c78676ef37399c3acd5  usr/lib/arm-linux-gnueabihf/perl5/5.20/DBD/SQLite/VirtualTable/PerlData.pm
+442e8c42bec8b65ad78cab514980a4f0  usr/lib/arm-linux-gnueabihf/perl5/5.20/auto/DBD/SQLite/SQLite.so
+b2791e3444c92e201f5def4ea29213ef  usr/share/doc/libdbd-sqlite3-perl/NEWS.Debian.gz
+5dc399953f25bd9222df1922a55f98d4  usr/share/doc/libdbd-sqlite3-perl/changelog.Debian.gz
+28ce4ac6be92052cb5f7ee8b0a4520c3  usr/share/doc/libdbd-sqlite3-perl/changelog.gz
+40649084464f0cf3f5ea6675a083aa9c  usr/share/doc/libdbd-sqlite3-perl/copyright
+470b22b2d594c43a9a4c38bbb1c191b8  usr/share/man/man3/DBD::SQLite.3pm.gz
+df3e5f54c265782e7f1ef3ae81fdbc16  usr/share/man/man3/DBD::SQLite::Cookbook.3pm.gz
+48455839f6728f01f9e7f5f53517bb6a  usr/share/man/man3/DBD::SQLite::Fulltext_search.3pm.gz
+6aaf9f6b7764fc7b489df987f11165ae  usr/share/man/man3/DBD::SQLite::VirtualTable.3pm.gz
+6ea6e34462ed1c1571b9d486ed5dc7ed  usr/share/man/man3/DBD::SQLite::VirtualTable::FileContent.3pm.gz
+e75b4ba25a096a9e7380fe94648113e1  usr/share/man/man3/DBD::SQLite::VirtualTable::PerlData.3pm.gz

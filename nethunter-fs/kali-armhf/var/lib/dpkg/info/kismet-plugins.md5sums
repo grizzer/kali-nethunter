@@ -1,0 +1,13 @@
+5c43f1572b00c65921ef52382cc964ce  usr/lib/kismet/aircrack-kismet.so
+881c0b36c47135bee1d83ed2ff0835ea  usr/lib/kismet/alertsyslog.so
+77261cc9074c12ce16e010a49c47941c  usr/lib/kismet/autowep-kismet.so
+81470e30014e2324f7dfa98f3f282ec8  usr/lib/kismet/btscan.so
+98ff843b909d56fc13f3814972c4f52b  usr/lib/kismet/kismet-syslog.so
+604c507b2d98b3e15083cd34d8ce57ac  usr/lib/kismet/spectool_net.so
+833e6139b5d3294ebab0e49c2e82c10a  usr/lib/kismet_client/btscan_ui.so
+38fe0b9a082bb5b9020e0ee12b25ddad  usr/lib/kismet_client/spectools_ui.so
+c59c4a77a9b61c1eae57424cad8e2776  usr/share/doc/kismet-plugins/README.gz
+a2eaed702273fb6fb0acdbe90cec6059  usr/share/doc/kismet-plugins/changelog.Debian.gz
+0a23189b164eb0bed4618210e70dab3b  usr/share/doc/kismet-plugins/changelog.gz
+6f056c1d69bc67727d4c4c9e1f38cffe  usr/share/doc/kismet-plugins/copyright
+5e170b3155a278eb190d1aad3bbb8182  usr/share/lintian/overrides/kismet-plugins

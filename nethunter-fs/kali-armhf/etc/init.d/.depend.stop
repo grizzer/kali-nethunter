@@ -1,0 +1,11 @@
+TARGETS = postgresql gpsd hostapd beef-xss isc-dhcp-server apache2 hddtemp openvpn tinyproxy ssh fake-hwclock thin stunnel4 saned urandom dnsmasq sendsigs rsyslog umountnfs.sh hwclock.sh networking umountfs umountroot halt reboot
+dnsmasq: apache2
+sendsigs: dnsmasq postgresql gpsd hostapd saned stunnel4 beef-xss isc-dhcp-server thin apache2 hddtemp openvpn tinyproxy
+rsyslog: dnsmasq postgresql gpsd saned stunnel4 sendsigs isc-dhcp-server apache2 hddtemp openvpn tinyproxy
+umountnfs.sh: dnsmasq postgresql gpsd hostapd saned stunnel4 beef-xss sendsigs rsyslog isc-dhcp-server thin apache2 hddtemp openvpn tinyproxy
+hwclock.sh: postgresql rsyslog
+networking: dnsmasq postgresql gpsd umountnfs.sh isc-dhcp-server apache2 hddtemp openvpn
+umountfs: dnsmasq postgresql gpsd hostapd saned hwclock.sh stunnel4 beef-xss umountnfs.sh isc-dhcp-server thin apache2 urandom hddtemp networking openvpn tinyproxy
+umountroot: umountfs fake-hwclock
+halt: umountroot
+reboot: umountroot

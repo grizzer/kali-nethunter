@@ -1,0 +1,6 @@
+27b146c2dd4f9e35169db3e90c15699b  usr/lib/arm-linux-gnueabihf/libgps.so.21.0.0
+5181bb6b1c30a95ea99dd67196fb7471  usr/lib/arm-linux-gnueabihf/libgpsd.so.22.0.0
+107f10b38a9bb3eb09489600f4753608  usr/share/doc/libgps21/changelog.Debian.gz
+dd82452b0540052312ea63ceed768cb8  usr/share/doc/libgps21/changelog.gz
+3e37119e77a4f5c07421e3c6186ccec6  usr/share/doc/libgps21/copyright
+4a44c5bd9b1b961acb39c5acc6cc3d2b  usr/share/lintian/overrides/libgps21

@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/include
+/usr/include/rtl-sdr_export.h
+/usr/include/rtl-sdr.h
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/pkgconfig
+/usr/lib/arm-linux-gnueabihf/pkgconfig/librtlsdr.pc
+/usr/lib/arm-linux-gnueabihf/librtlsdr.a
+/usr/share
+/usr/share/doc
+/usr/share/doc/librtlsdr-dev
+/usr/share/doc/librtlsdr-dev/changelog.Debian.gz
+/usr/share/doc/librtlsdr-dev/copyright
+/usr/share/doc/librtlsdr-dev/README.Debian
+/usr/lib/arm-linux-gnueabihf/librtlsdr.so

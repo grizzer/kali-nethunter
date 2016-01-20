@@ -1,0 +1,7 @@
+922481c8a3f789603ba23918fc4c1ddd  usr/lib/ruby/vendor_ruby/simple_oauth.rb
+25730cdc9bbb296521761bc600ec8098  usr/lib/ruby/vendor_ruby/simple_oauth/header.rb
+52460b258c005ee7f0a4ebc4d4c6efbc  usr/share/doc/ruby-simple-oauth/README.md
+d077b7b64d333eb92bc718c1237065a3  usr/share/doc/ruby-simple-oauth/changelog.Debian.gz
+f86713da29adcc668b5d5980c39643c2  usr/share/doc/ruby-simple-oauth/copyright
+04273fa3d9ff367c8a3d2c18dbc41dd0  usr/share/lintian/overrides/ruby-simple-oauth
+ad96394612d515b40a6804132f94531b  usr/share/rubygems-integration/all/specifications/simple_oauth-0.2.0.gemspec

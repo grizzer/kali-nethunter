@@ -1,0 +1,31 @@
+TODO
+======
+
+- adjust RPM spec file to check for libxfce4ui etc.? or does checking for the panel suffice?
+
+- Use notfication messages when alert is on; when maximum is reached.
+
+- fix error: doesn't find all sensors when newly adding plugin to panel - sensors library problem?
+
+- read acpi fan state?
+
+- switch to sysfs completely for everything?
+
+- decrease size of entries in min/max value fields... would have to change renderer for double values...
+
+- find reason why plugin crashes on exit
+
+Known bugs or user requests
+---------------------------
+- enumerate sensors from libsensors in an arbitrary fashion so that the order in which libsensors delivers them does no longer matter
+
+- common settings for both application and plugin wrt. sensor names etc.
+
+Plans
+-----
+- use D-bus to send messages with new settings from xfce4-sensors application to panel plugin
+
+- have someone implement kde and gnome plugins based on library/API
+
+- have someone implement some BSD backends and integrate them into project
+

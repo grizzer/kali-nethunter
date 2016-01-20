@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/bin
+/usr/bin/sslsplit
+/usr/share
+/usr/share/doc
+/usr/share/doc/sslsplit
+/usr/share/doc/sslsplit/changelog.Debian.gz
+/usr/share/doc/sslsplit/NEWS.gz
+/usr/share/doc/sslsplit/README
+/usr/share/doc/sslsplit/TODO
+/usr/share/doc/sslsplit/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/sslsplit.1.gz

@@ -1,0 +1,14 @@
+65a493507d7f320181cf6d2415520f16  usr/bin/armitage
+74bcbbef057d9025c94fe1e889dfe30a  usr/bin/teamserver
+9341475e305a6fb00615fd042e9fdd40  usr/share/armitage/armitage
+1f16432d66fbb9b212152c46c513d3be  usr/share/armitage/armitage-logo.png
+d6f3125c4299560e3072cac59b97993f  usr/share/armitage/armitage.jar
+aa36403abee866281f461b8c1a5c4cc7  usr/share/armitage/cortana.jar
+c55cb1b366393e7a0e44a866cd8f9ea8  usr/share/armitage/readme.txt
+3420b9b4547a3262ee298956c8239a5d  usr/share/armitage/teamserver
+ac925952ac1d11163480fa02b9be65fe  usr/share/armitage/whatsnew.txt
+4d6869e47e23fc959c44f14f860a3712  usr/share/doc/armitage/changelog.Debian.gz
+dc7c3b80fb6b292ea1ea0884e2d77940  usr/share/doc/armitage/copyright
+c55cb1b366393e7a0e44a866cd8f9ea8  usr/share/doc/armitage/readme.txt
+5b522049d596e5846afff1e5db05db90  usr/share/doc/armitage/whatsnew.txt.gz
+c8cbb392cd58a23e04efeb5babe87a7d  usr/share/lintian/overrides/armitage

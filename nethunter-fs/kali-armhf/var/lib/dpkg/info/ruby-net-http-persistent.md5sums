@@ -1,0 +1,8 @@
+9a610cd6944a09aa964b5e6a572fe5c5  usr/lib/ruby/vendor_ruby/net/http/faster.rb
+517220fa49489b3dbd6e4c97ecd2f1e6  usr/lib/ruby/vendor_ruby/net/http/persistent.rb
+7191824fef004ede888980c6415829dc  usr/lib/ruby/vendor_ruby/net/http/persistent/ssl_reuse.rb
+6c5e6f57412666b13d1bc79adf64bcc9  usr/share/doc/ruby-net-http-persistent/README.rdoc
+98973037aaeb5f59f8d90f0d4d0b19c9  usr/share/doc/ruby-net-http-persistent/changelog.Debian.gz
+3fdbf204742dac437bb7ba64ae2d86ee  usr/share/doc/ruby-net-http-persistent/changelog.gz
+f789b638538e7cd9ee3fd710f473f081  usr/share/doc/ruby-net-http-persistent/copyright
+1093bbc0d1f03f9fb55d1b2d56e33794  usr/share/rubygems-integration/all/specifications/net-http-persistent-2.9.gemspec

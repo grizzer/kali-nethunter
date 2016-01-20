@@ -1,0 +1,5 @@
+ba225e47f1c09828a746c6c89fb872e7  usr/lib/arm-linux-gnueabihf/gtk-3.0/modules/libcanberra-gtk3-module.so
+80cd9b9e33123c3084e530d7e2b30544  usr/lib/gnome-settings-daemon-3.0/gtk-modules/canberra-gtk3-module.desktop
+b70806e71cde511ad40751b08bf21bca  usr/share/doc/libcanberra-gtk3-module/README.gz
+5538b080acc22128bef002d81390a8a1  usr/share/doc/libcanberra-gtk3-module/changelog.Debian.gz
+ee9552e21635b25ba74d5069d5df57f3  usr/share/doc/libcanberra-gtk3-module/copyright

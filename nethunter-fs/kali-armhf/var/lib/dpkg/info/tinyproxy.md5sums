@@ -1,0 +1,17 @@
+073659b46a704cc7ae4ae62cfedcdacb  usr/sbin/tinyproxy
+12312d63fed4fc8337249ecc0063d04b  usr/share/doc/tinyproxy/NEWS.gz
+c6184bc7f2d91057d9c4f247d22219b4  usr/share/doc/tinyproxy/README.Debian
+01049cdf9ffd6fecb6a5afefc16411f8  usr/share/doc/tinyproxy/changelog.Debian.armhf.gz
+b4a7ab898af75c0b9a3ead513bb8de00  usr/share/doc/tinyproxy/changelog.Debian.gz
+3393f7434e122353567d83801d6b2628  usr/share/doc/tinyproxy/changelog.gz
+714cae44a2d48df3e3a88252c9760239  usr/share/doc/tinyproxy/copyright
+5cf3d0db28ea3db91ebd1bfa3f454da9  usr/share/doc/tinyproxy/examples/tinyproxy.conf.gz
+c78431e207da02f5230ef1beb55b8579  usr/share/doc/tinyproxy/filter-howto.txt
+a53d5a546383f33acffbd410738bac1d  usr/share/doc/tinyproxy/http-error-codes.txt
+e8fd972d1476233fbc99a0a2b043cb37  usr/share/doc/tinyproxy/http-rfcs.txt
+7eed0c50e3a3f4b0321c0ce62f421680  usr/share/lintian/overrides/tinyproxy
+67b35c9b67427985e45e9f777a11dd56  usr/share/man/man5/tinyproxy.conf.5.gz
+93b4bb246e4d7ba0484b84e8e437a5b2  usr/share/man/man8/tinyproxy.8.gz
+eaeb8f68a593cd7fd556e4042113fa87  usr/share/tinyproxy/debug.html
+a4304310e035beae26adb0ed276b342e  usr/share/tinyproxy/default.html
+b796374a2470bc9cc7feaf40fdd5f4a7  usr/share/tinyproxy/stats.html

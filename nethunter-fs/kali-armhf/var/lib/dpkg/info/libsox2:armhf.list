@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libsox.so.2.0.1
+/usr/share
+/usr/share/doc
+/usr/share/doc/libsox2
+/usr/share/doc/libsox2/changelog.gz
+/usr/share/doc/libsox2/changelog.Debian.gz
+/usr/share/doc/libsox2/copyright
+/usr/lib/arm-linux-gnueabihf/libsox.so.2

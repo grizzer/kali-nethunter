@@ -1,0 +1,11 @@
+ae11d29e95d4ec42d6a236e9495c8502  usr/lib/arm-linux-gnueabihf/ruby/vendor_ruby/2.1.0/do_postgres/do_postgres.so
+48360a85bb944300d9cd06635fd00971  usr/lib/ruby/vendor_ruby/do_postgres.rb
+d101a341aed4d11b1d75377f0ef64754  usr/lib/ruby/vendor_ruby/do_postgres/encoding.rb
+c87506f7febde135af4f64eef52f9bf0  usr/lib/ruby/vendor_ruby/do_postgres/transaction.rb
+b410959a59a3c1a6b034a52390a8f60b  usr/lib/ruby/vendor_ruby/do_postgres/version.rb
+5a82e4b408c72d4df9bf5a156a8d1c0d  usr/share/doc/ruby-dataobjects-postgres/README.markdown
+87a1f43ba22a5f7835c0cabc50196edf  usr/share/doc/ruby-dataobjects-postgres/TODO.Debian
+1309fd718e2e2a6ce436ee2974edc8b2  usr/share/doc/ruby-dataobjects-postgres/changelog.Debian.gz
+ece3cd03d3ba9e3f8d3e1982807965e1  usr/share/doc/ruby-dataobjects-postgres/changelog.gz
+33a200c9380fd06900d97ae30f857217  usr/share/doc/ruby-dataobjects-postgres/copyright
+4681f079e702742021fb4676a291491b  usr/share/rubygems-integration/2.1/specifications/do_postgres-0.10.14.gemspec

@@ -1,0 +1,4 @@
+# upstream (DRC <dcommander@users.sourceforge.net>) states that the below issue
+# can be ignored, see:
+# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=612341#255
+libturbojpeg1: shlib-calls-exit usr/lib/x86_64-linux-gnu/libturbojpeg.so.1.3.0

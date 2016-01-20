@@ -1,0 +1,19 @@
+make start_postgres_and_auto_building work, and uncomment
+override_dh_auto_build: target in debian/rules.
+The main problem is to be able to run the postgres server with postgres user
+using su while the package is being built with fakeroot. Is it even possible?
+
+For the moment, to run the tests,
+- I run the first half of start_postgres_and_auto_install.sh
+  with postgres user (until dh_autoinstall).
+- I build the package with a simple ruby-tests.rake:
+---8<------
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern      = './spec/*_spec.rb'
+end
+
+task :default => :spec
+--->8-------
+- I run the second half of the script with postgres user.

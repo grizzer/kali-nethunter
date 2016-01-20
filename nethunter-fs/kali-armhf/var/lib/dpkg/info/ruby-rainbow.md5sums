@@ -1,0 +1,15 @@
+ec2ab75bc33bf74c4bcea11e345fde6f  usr/lib/ruby/vendor_ruby/rainbow.rb
+8583a2c4b9b89a565fb9f4ef43fb39ac  usr/lib/ruby/vendor_ruby/rainbow/color.rb
+aabcd0c04f950e5e1b788ac2a3aa9bad  usr/lib/ruby/vendor_ruby/rainbow/ext/string.rb
+7514191e731b9be54bed03f0dadd2603  usr/lib/ruby/vendor_ruby/rainbow/global.rb
+e25fa61dd5ef538c2d6cd5b106ce3221  usr/lib/ruby/vendor_ruby/rainbow/legacy.rb
+7ce97d8ae4ff58a635d29da09cb7b58a  usr/lib/ruby/vendor_ruby/rainbow/null_presenter.rb
+c8925cc7aa2de8616810e808eb8d2271  usr/lib/ruby/vendor_ruby/rainbow/presenter.rb
+27a79ea3772d14d0b97aab0db187901c  usr/lib/ruby/vendor_ruby/rainbow/string_utils.rb
+60b1aa9abf0f0b367bac70f8c70092df  usr/lib/ruby/vendor_ruby/rainbow/version.rb
+7bfb5de947150601822f272944548b45  usr/lib/ruby/vendor_ruby/rainbow/wrapper.rb
+1a5dda6ace1cf1cede594245c6cdfedf  usr/share/doc/ruby-rainbow/README.markdown.gz
+08bc70e1c56e88a551e801b6e003195d  usr/share/doc/ruby-rainbow/changelog.Debian.gz
+3d06d8ce327daa23b1c8ef40f9952cad  usr/share/doc/ruby-rainbow/changelog.gz
+bb4e0e860ac7fb90633ac6b30d1206a3  usr/share/doc/ruby-rainbow/copyright
+bd70d98aedd3fc37780b6d878507364e  usr/share/rubygems-integration/all/specifications/rainbow-2.0.0.gemspec

@@ -1,0 +1,11 @@
+3ad5c0e7da439df792c87b4a9638dec7  usr/bin/wipe
+6bac8df195128b1b603705a700744f1f  usr/share/doc/wipe/BUGS
+1489a54abe949c93f7838cd4883148ba  usr/share/doc/wipe/README.gz
+19f80287023a6f236237c332ae8d4d34  usr/share/doc/wipe/changelog.Debian.gz
+a03c45237d736fc79c61fee34fb175f8  usr/share/doc/wipe/changelog.gz
+f6aad3f0ce69edaf665650de3880239f  usr/share/doc/wipe/copyright
+7443c702a0e97c8c5a535c68399e0196  usr/share/doc/wipe/examples/wipefd0
+87d8bbbfab4150541704effc9ba55f14  usr/share/doc/wipe/examples/wswap.pl
+a6ae7222fa9915788acf0a86972e3b83  usr/share/man/man1/wipe.1.gz
+30b50c6234b7c252b5cfc15cd5746d37  usr/share/man/man1/wipe.tr-asc.1.gz
+30b50c6234b7c252b5cfc15cd5746d37  usr/share/man/tr/man1/wipe.1.gz

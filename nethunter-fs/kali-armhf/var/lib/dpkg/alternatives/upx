@@ -1,0 +1,9 @@
+auto
+/usr/bin/upx
+upx.1.gz
+/usr/share/man/man1/upx.1.gz
+
+/usr/bin/upx-ucl
+30
+/usr/share/man/man1/upx-ucl.1.gz
+

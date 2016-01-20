@@ -1,0 +1,16 @@
+ad00d56fa8f4a702c726559025bc411b  usr/bin/dbd
+6d382cad0a57130d802cf447b35e14e9  usr/share/dbd/binaries/dbd-aarch64
+08d8dde3f6b5babcf6323f5ba3ef6320  usr/share/dbd/binaries/dbd-aarch64-static
+99229a2c4805b738bfeedb0c9dc378f3  usr/share/dbd/binaries/dbd-armv7
+832040d7b6b8a69bf576a653a64f939a  usr/share/dbd/binaries/dbd-armv7-static
+1385be8037145c368c63c188d095e357  usr/share/dbd/binaries/dbd-linux32
+6dcf3fa47eb482c1ba12057d3df8f3f7  usr/share/dbd/binaries/dbd-linux32-static
+a08368bb7de7c70561f157fbb884942f  usr/share/dbd/binaries/dbd-ppc64-static
+9ffec863d45cbb34efe358653966132a  usr/share/dbd/binaries/dbd.exe
+a7244a859181465ddc8135849e07b121  usr/share/dbd/binaries/dbdbg-stealth.exe
+5174d9a9ddf532aa69528385fa46119b  usr/share/dbd/binaries/dbdbg.exe
+41d277735f4103b60039502a3076acb0  usr/share/doc/dbd/README.gz
+2173218a27f4e23ed99eea2f3514342a  usr/share/doc/dbd/TODO
+7ff28b94b970edbf5ea501d31a340428  usr/share/doc/dbd/changelog.Debian.gz
+610c71745ab48796218db08635eeccb4  usr/share/doc/dbd/changelog.gz
+ed6fe97762b820e9c1ad68c456a5c1eb  usr/share/doc/dbd/copyright

@@ -1,0 +1,9 @@
+669b3903021f3d8e623d4def9ae6e6b7  usr/lib/ruby/vendor_ruby/msfrpc-client.rb
+c2afcc5f8e5ecb0cdb6a2366f560805c  usr/lib/ruby/vendor_ruby/msfrpc-client/client.rb
+b148757718decd3cb7f44e5c356d8c54  usr/lib/ruby/vendor_ruby/msfrpc-client/constants.rb
+b5de53858f8b5ea9bb91048c9cab8e95  usr/share/doc/ruby-msfrpc-client/README.markdown
+7277b9d74b577d751a6849c00e88d41d  usr/share/doc/ruby-msfrpc-client/changelog.Debian.gz
+45b323395dd56dacc012d07fbe264e0c  usr/share/doc/ruby-msfrpc-client/copyright
+124cc3ae32ade664e19af9b1edbf2566  usr/share/doc/ruby-msfrpc-client/examples/msfrpc_irb.rb
+5c4c9d77f74bb85dc6718706c354920b  usr/share/doc/ruby-msfrpc-client/examples/msfrpc_pro_report.rb
+16f072b47ee4502d10087b6b5da2f025  usr/share/rubygems-integration/all/specifications/msfrpc-client-1.0.1.gemspec

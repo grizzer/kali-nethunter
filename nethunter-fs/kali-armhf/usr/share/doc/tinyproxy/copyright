@@ -1,0 +1,29 @@
+This package was debianized by Ed Boraas <ed@debian.org> on
+Sun, 13 Jun 1999 02:40:21 -0600.
+
+It was downloaded from http://www.banu.com/tinyproxy/.
+
+Upstream authors: Steven Young and Robert James Kaes.
+
+Copyright: © 1998        Steven Young <sdyoung@miranda.org>
+           © 1998 - 2002 Robert James Kaes <rjkaes@users.sourceforge.net>
+           © 2000        Chris Lightfoot <chris@ex-parrot.com>
+           © 2009 - 2011 Mukund Sivaraman <muks@banu.com>
+           © 2009 - 2011 Michael Adam <obnox@samba.org>
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+On Debian systems, the complete text of the GNU General Public
+License, version 2, can be found in /usr/share/common-licenses/GPL-2.

@@ -1,0 +1,1 @@
+tinyproxy: non-standard-dir-perm var/log/tinyproxy/ 0750 != 0755

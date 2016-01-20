@@ -1,0 +1,59 @@
+have_library: checking for pcap_open_live() in -lpcap... -------------------- yes
+
+"gcc -o conftest -I/usr/include/arm-linux-gnueabihf/ruby-2.1.0 -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I. -D_FORTIFY_SOURCE=2 -D_FILE_OFFSET_BITS=64  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/arm-linux-gnueabihf -L. -Wl,-z,relro -L/build/ruby2.1-iiglyk/ruby2.1-2.1.5/debian/lib -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.1  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/usr/include/arm-linux-gnueabihf/ruby-2.1.0 -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I. -D_FORTIFY_SOURCE=2 -D_FILE_OFFSET_BITS=64  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/arm-linux-gnueabihf -L. -Wl,-z,relro -L/build/ruby2.1-iiglyk/ruby2.1-2.1.5/debian/lib -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.1 -lpcap  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <pcap.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))pcap_open_live; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for pcap_setnonblock() in -lpcap... -------------------- yes
+
+"gcc -o conftest -I/usr/include/arm-linux-gnueabihf/ruby-2.1.0 -I/usr/include/ruby-2.1.0/ruby/backward -I/usr/include/ruby-2.1.0 -I. -D_FORTIFY_SOURCE=2 -D_FILE_OFFSET_BITS=64  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/arm-linux-gnueabihf -L. -Wl,-z,relro -L/build/ruby2.1-iiglyk/ruby2.1-2.1.5/debian/lib -fstack-protector -rdynamic -Wl,-export-dynamic    -lpcap  -lruby-2.1 -lpcap -lpcap  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <pcap.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))pcap_setnonblock; return 0; }
+/* end */
+
+--------------------
+

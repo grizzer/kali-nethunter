@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/ruby
+/usr/lib/ruby/vendor_ruby
+/usr/lib/ruby/vendor_ruby/buftok.rb
+/usr/share
+/usr/share/doc
+/usr/share/doc/ruby-buftok
+/usr/share/doc/ruby-buftok/copyright
+/usr/share/doc/ruby-buftok/changelog.Debian.gz
+/usr/share/rubygems-integration
+/usr/share/rubygems-integration/all
+/usr/share/rubygems-integration/all/specifications
+/usr/share/rubygems-integration/all/specifications/buftok-0.2.0.gemspec

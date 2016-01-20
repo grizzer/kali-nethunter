@@ -1,0 +1,4 @@
+idna
+pyasn1
+six>=1.4.1
+cffi>=0.8

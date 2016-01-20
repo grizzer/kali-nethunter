@@ -1,0 +1,63 @@
+/usr/bin/ruby2.1 extconf.rb 
+checking for ruby/st.h... yes
+checking for st.h... yes
+checking for rb_str_replace() in ruby.h... yes
+checking for rb_intern_str() in ruby.h... yes
+checking for rb_sym2str() in ruby.h... no
+checking for rb_str_intern() in ruby.h... yes
+checking for rb_block_lambda() in ruby.h... yes
+checking for rb_hash_dup() in ruby.h... yes
+checking for rb_hash_clear() in ruby.h... yes
+creating Makefile
+
+make "DESTDIR=" clean
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/msgpack-0.7.1/ext/msgpack'
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/msgpack-0.7.1/ext/msgpack'
+
+make "DESTDIR="
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/msgpack-0.7.1/ext/msgpack'
+compiling rmem.c
+compiling rbinit.c
+compiling factory_class.c
+factory_class.c: In function 'Factory_register_type':
+factory_class.c:164:5: warning: implicit declaration of function 'rb_num2int' [-Wimplicit-function-declaration]
+     ext_type = rb_num2int(argv[0]);
+     ^
+compiling packer_class.c
+packer_class.c: In function 'Packer_write_ext':
+packer_class.c:155:5: warning: implicit declaration of function 'rb_num2int' [-Wimplicit-function-declaration]
+     int ext_type = rb_num2int(type);
+     ^
+compiling unpacker.c
+compiling packer_ext_registry.c
+compiling core_ext.c
+compiling packer.c
+In file included from packer.c:19:0:
+packer.c: In function 'msgpack_packer_write_value':
+packer.h:364:9: warning: 'ext_type' may be used uninitialized in this function [-Wmaybe-uninitialized]
+         msgpack_buffer_write_2(PACKER_BUFFER_(pk), 0xd8, ext_type);
+         ^
+packer.c:126:9: note: 'ext_type' was declared here
+     int ext_type;
+         ^
+compiling unpacker_ext_registry.c
+compiling extension_value_class.c
+compiling unpacker_class.c
+unpacker_class.c: In function 'Unpacker_register_type':
+unpacker_class.c:376:5: warning: implicit declaration of function 'rb_num2int' [-Wimplicit-function-declaration]
+     ext_type = rb_num2int(argv[0]);
+     ^
+unpacker_class.c: At top level:
+unpacker_class.c:220:14: warning: 'Unpacker_peek_next_type' defined but not used [-Wunused-function]
+ static VALUE Unpacker_peek_next_type(VALUE self)
+              ^
+compiling buffer_class.c
+compiling buffer.c
+linking shared-object msgpack/msgpack.so
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/msgpack-0.7.1/ext/msgpack'
+
+make "DESTDIR=" install
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/msgpack-0.7.1/ext/msgpack'
+/usr/bin/install -c -m 0755 msgpack.so ./.gem.20151214-15291-b4qcgd/msgpack
+installing default msgpack libraries
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/msgpack-0.7.1/ext/msgpack'

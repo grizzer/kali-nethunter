@@ -1,0 +1,1 @@
+../../../../../share/pyshared/watchdog/utils/__init__.py

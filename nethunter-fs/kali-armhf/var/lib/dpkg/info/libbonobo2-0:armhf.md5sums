@@ -1,0 +1,14 @@
+da8e2d7cca7dbf14ae99f673d0610251  usr/lib/arm-linux-gnueabihf/bonobo-activation/bonobo-activation-server
+d9e3069653c831762ddad24cea4be2fd  usr/lib/arm-linux-gnueabihf/bonobo/monikers/libmoniker_std_2.so
+d9363bb9d7a98af7485931ad56980ec4  usr/lib/arm-linux-gnueabihf/bonobo/servers/Bonobo_CosNaming_NamingContext.server
+87020d230331c43a403da0489cc434eb  usr/lib/arm-linux-gnueabihf/bonobo/servers/Bonobo_Moniker_std.server
+2d08c2263358fabb3bd9aacd759f77f1  usr/lib/arm-linux-gnueabihf/libbonobo-2.so.0.0.0
+1e2fd01925b80e7e143a8ed198ad408a  usr/lib/arm-linux-gnueabihf/libbonobo-activation.so.4.0.0
+4067106d62c9794c2abf18b1f2e9dbeb  usr/lib/arm-linux-gnueabihf/orbit-2.0/Bonobo_module.so
+d35430acaf5f2dc915972e117e45c34d  usr/share/doc/libbonobo2-0/AUTHORS
+933c637c189c4165a436a64f7273f69f  usr/share/doc/libbonobo2-0/NEWS.gz
+407df2e4dc4c2cf7b260e1796f98c58a  usr/share/doc/libbonobo2-0/README
+6d316eb460e3aa7aac452b3bcc37e1ec  usr/share/doc/libbonobo2-0/TODO
+8a55f0a2bb43e4cd3c2db221c169d10e  usr/share/doc/libbonobo2-0/changelog.Debian.gz
+02b0e3c6887ff507a1e07760a89fc7d3  usr/share/doc/libbonobo2-0/changelog.gz
+34fa5e4ae4c16acc85067f6fabfbf1f5  usr/share/doc/libbonobo2-0/copyright

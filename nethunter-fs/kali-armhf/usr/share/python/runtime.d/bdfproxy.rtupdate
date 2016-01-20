@@ -1,0 +1,6 @@
+#! /bin/sh
+set -e
+if [ "$1" = rtupdate ]; then
+	pyclean -p bdfproxy /usr/share/bdfproxy
+	pycompile -p bdfproxy  /usr/share/bdfproxy
+fi

@@ -1,0 +1,8 @@
+e539f6d30c61f3d2b79e15876147f7db  usr/lib/arm-linux-gnueabihf/ruby/vendor_ruby/2.1.0/ruby_http_parser.so
+fee241181bf476b9fadea91b7f830d37  usr/lib/ruby/vendor_ruby/http/parser.rb
+8d21ddae574ff9dcc5a5ab967a8c5942  usr/lib/ruby/vendor_ruby/http_parser.rb
+8ef3b99762b4f69961c3976e58ab6f02  usr/share/doc/ruby-http-parser.rb/README.md
+cc395602a0b918921415c024a8fd4349  usr/share/doc/ruby-http-parser.rb/changelog.Debian.armhf.gz
+6aad40dee8da4dc26a253d3db952d089  usr/share/doc/ruby-http-parser.rb/changelog.Debian.gz
+e8ea315e9b035d364a7e825ad43c1246  usr/share/doc/ruby-http-parser.rb/copyright
+491a951169d825425293973764009f2f  usr/share/rubygems-integration/2.1/specifications/http_parser.rb-0.6.0.gemspec

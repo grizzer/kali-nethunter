@@ -1,0 +1,16 @@
+132daf25d8ce5ea882ecb63591048e06  usr/bin/html2markdown.py2
+2a2aa05716266596d2b8134031c3c367  usr/lib/python2.7/dist-packages/html2text-2015.6.21.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python2.7/dist-packages/html2text-2015.6.21.egg-info/dependency_links.txt
+3c3046f41fdc9a94f240865f09cfb7cd  usr/lib/python2.7/dist-packages/html2text-2015.6.21.egg-info/entry_points.txt
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python2.7/dist-packages/html2text-2015.6.21.egg-info/not-zip-safe
+32c70ec6c3a8f91b31cd7ba26f539483  usr/lib/python2.7/dist-packages/html2text-2015.6.21.egg-info/top_level.txt
+638ad4c0338e58d253ffc71a6db88740  usr/lib/python2.7/dist-packages/html2text/__init__.py
+f3fc50922bfe787d9d62bfdd9308b650  usr/lib/python2.7/dist-packages/html2text/cli.py
+bae72a1713e2386ea10ba5d5ce0346e8  usr/lib/python2.7/dist-packages/html2text/compat.py
+5cdad264461cac20c4b4ff37a3d03e77  usr/lib/python2.7/dist-packages/html2text/config.py
+005d83620321bec2e7b9fd03d5bb4d05  usr/lib/python2.7/dist-packages/html2text/utils.py
+d8e0a11c6541f1fce19100c35dc3750f  usr/share/doc/python-html2text/README.md.gz
+9bbbd48957405f4acb0580d9d7f80fd6  usr/share/doc/python-html2text/changelog.Debian.gz
+fbe87ab838343f35ace2774078c32c2e  usr/share/doc/python-html2text/changelog.gz
+88adb5b11b297f71b245b613d593e29d  usr/share/doc/python-html2text/copyright
+5bf2d3af9b95e1a431928ede30db5137  usr/share/man/man1/html2markdown.py2.1.gz

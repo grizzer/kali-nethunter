@@ -1,0 +1,25 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: term-ansicolor
+Upstream-Contact: Florian Frank <flori@ping.de>
+Source: http://flori.github.com/term-ansicolor/
+
+Files: *
+Copyright: 2002-2009, Florian Frank <flori@ping.de>
+License: GPL-2
+ This is free software; you can redistribute it and/or modify it under the
+ terms of the GNU General Public License Version 2 as published by the Free
+ Software Foundation: www.gnu.org/copyleft/gpl.html
+ .
+ On Debian systems, the full text of the GNU General Public License version 2
+ can be found in the file `/usr/share/common-licenses/GPL-2'.
+
+Files: debian/*
+Copyright: 2010, Ben Armstrong <synrg@sanctuary.nslug.ns.ca>
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation; either version 2 of the License, or (at your option) any later
+ version.
+ .
+ On Debian systems, the full text of the GNU General Public License version 2
+ can be found in the file `/usr/share/common-licenses/GPL-2'.

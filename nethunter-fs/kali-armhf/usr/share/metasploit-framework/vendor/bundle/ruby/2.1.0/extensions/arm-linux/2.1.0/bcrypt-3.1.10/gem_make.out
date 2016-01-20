@@ -1,0 +1,22 @@
+/usr/bin/ruby2.1 extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/bcrypt-3.1.10/ext/mri'
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/bcrypt-3.1.10/ext/mri'
+
+make "DESTDIR="
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/bcrypt-3.1.10/ext/mri'
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+compiling crypt.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/bcrypt-3.1.10/ext/mri'
+
+make "DESTDIR=" install
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/bcrypt-3.1.10/ext/mri'
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20151214-15291-1es73si
+installing default bcrypt_ext libraries
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/bcrypt-3.1.10/ext/mri'

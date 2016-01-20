@@ -1,0 +1,7 @@
+# We install an unversionned libettercap.so which is for private use
+ettercap-common: postinst-must-call-ldconfig usr/lib/libettercap.so
+ettercap-common: no-symbols-control-file usr/lib/libettercap.so
+ettercap-common: shlib-without-versioned-soname usr/lib/libettercap.so libettercap.so
+ettercap-common: package-name-doesnt-match-sonames libettercap
+ettercap-common: package-name-doesnt-match-sonames libettercap0
+ettercap-common: non-dev-pkg-with-shlib-symlink usr/lib/libettercap.so.0.0.0 usr/lib/libettercap.so

@@ -1,0 +1,31 @@
+Xfce4-Sensors-Plugin
+====================
+
+Version 1.0.0 - For Xfce 4 Panel 4.6.0 (and hopefully newer as well!)
+
+Copyright (c) 2004-2009 by Fabian Nowak (timystery@arcor.de)
+Copyright (c) 2005-2006 by Stefan Ott
+
+Licence: GPL version 2 (or later at your option)
+
+Description: Reads your hardware sensor values and displays them in your panel
+
+Dependencies: libxfce4ui, libxfce4util, libgtk2.0-0,
+                xfce4-panel
+              libxfce4ui-dev, libxfce4util-dev, libgtk2.0-dev,
+                xfce4-panel-dev
+
+Optional: hddtemp, netcat, lmsensors3, working ACPI library, libnotify, nvidia-utils/xnvctrl
+
+Preparation: Install libsensors, lmsensors, hddtemp, xnvctrl
+             for lmsensors do:
+             sensors-detect as root somehow, have modules be added to config files, let them be loaded or load them manually or do some sudo service moduleinit-tools restart or the like
+             and then install.
+
+Installation: ./configure && make && [sudo] make install
+
+Bugs: Refer to TODO file
+
+Thanks to: Xfce Team and Enrico Tröger for additional help; 
+           Raphael Groner for bug-hunting, usability reports, feature requests.
+

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+    adduser --quiet --system beef-xss --group --home /var/lib/beef-xss
+    mkdir -p /var/lib/beef-xss
+    chown -R beef-xss:beef-xss /var/lib/beef-xss
+    chown -R beef-xss:beef-xss /usr/share/beef-xss/extensions/admin_ui/media/javascript-min
+fi
+
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/beef-xss" ]; then
+	update-rc.d beef-xss defaults >/dev/null
+	invoke-rc.d beef-xss start || exit $?
+fi
+# End automatically added section
+
+

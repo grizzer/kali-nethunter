@@ -1,0 +1,9 @@
+auto
+/usr/bin/jar
+jar.1.gz
+/usr/share/man/man1/jar.1.gz
+
+/usr/bin/fastjar
+100
+/usr/share/man/man1/fastjar.1.gz
+

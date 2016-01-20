@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e 
+
+if [ "$1" = "remove" ]; then
+    for vhost in  000-mana-toolkit.conf accounts.google.conf apple.conf blackberry.conf facebook.conf gmail.com.conf google.conf secure-redirect.conf windows.conf; do
+	a2dissite $vhost || true
+    done
+    a2ensite 000-default || true
+fi
+
+

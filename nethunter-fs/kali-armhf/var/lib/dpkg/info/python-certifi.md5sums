@@ -1,0 +1,11 @@
+d97da5ea7a5d028e06d8cc3fcd3fcc42  usr/lib/python2.7/dist-packages/certifi-2015.4.28.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python2.7/dist-packages/certifi-2015.4.28.egg-info/dependency_links.txt
+5ebd7f7c387ebb31c14e3c701023ac97  usr/lib/python2.7/dist-packages/certifi-2015.4.28.egg-info/top_level.txt
+b66d0b0a156b370874c57847309c251d  usr/lib/python2.7/dist-packages/certifi/__init__.py
+0602925953f793522a8f653fb6cb556d  usr/lib/python2.7/dist-packages/certifi/__main__.py
+c2de0922cf1c5b80eb519aee8dd17f9b  usr/lib/python2.7/dist-packages/certifi/cacert.pem
+4365188174d75e09a6944fe42bfab7a5  usr/lib/python2.7/dist-packages/certifi/core.py
+0d607febbf9695eddd84dcb91b8ec372  usr/lib/python2.7/dist-packages/certifi/mkcert.pem
+a29a47a0dcd55af3f45a45c0b64b740f  usr/lib/python2.7/dist-packages/certifi/old_root.pem
+990faeb43ae95fcc15732404663e6966  usr/share/doc/python-certifi/changelog.Debian.gz
+5ef33c90d4594140f24a5c88232f490e  usr/share/doc/python-certifi/copyright

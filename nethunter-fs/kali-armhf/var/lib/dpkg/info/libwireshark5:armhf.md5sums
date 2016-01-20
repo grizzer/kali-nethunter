@@ -1,0 +1,17 @@
+4b6c1e4a9eece0ca3ad92c438866e09c  usr/lib/arm-linux-gnueabihf/libwireshark.so.5.0.4
+78dcb0cfe3d06e0db77f32ac1b1fc607  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/docsis.so
+0d5512fbe81600df155f3181cf8d961e  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/ethercat.so
+dda20b2291f8ab56a4a24b4eb8df5f67  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/gryphon.so
+095fc3c185a0905159c9330c88f45616  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/irda.so
+93305122188b2450d1dae36d7aaded7e  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/m2m.so
+61c6bb81bb57117c62a6c53261006733  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/mate.so
+b2ab0e6a2320b7e7b5c15c409c777a51  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/opcua.so
+6b71ae469ad6e3a54c3e4b98856ba1f6  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/profinet.so
+f666a813075e36e64bad492e0d580f2c  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/stats_tree.so
+bd9b1df240a0dc76d78862cd861c0114  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/unistim.so
+b52ac0c5d74ab0575ac254df08f9da40  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/wimax.so
+d33142226b4ba9a86060e71830b8155e  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/wimaxasncp.so
+0546b19abc5c5930918b2a55798738f5  usr/lib/arm-linux-gnueabihf/wireshark/plugins/1.12.6/wimaxmacphy.so
+f0a0e1b8403f74f7d558ee31106a7d54  usr/share/doc/libwireshark5/changelog.Debian.gz
+10a36373072707ab4fb5de8117efe0b8  usr/share/doc/libwireshark5/changelog.gz
+c393f7c1204e120b3e8d9b00130faaef  usr/share/doc/libwireshark5/copyright

@@ -1,0 +1,10 @@
+term-ansicolor for Debian
+-------------------------
+
+The original term-ansicolor package provides a command called `cdiff` that
+colorizes diff output. The package colordiff also provides a command called
+`cdiff` that does the same thing, so the term-ansicolor Debian package does not
+install `cdiff`. If you need that functionality, please install and use the
+colordiff package.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu Aug 11 23:18:32 PDT 2011

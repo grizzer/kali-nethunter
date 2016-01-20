@@ -1,0 +1,9 @@
+379a67102fa48bee6bbdeecebd53df1c  usr/sbin/ptunnel
+24d0216d47eefcecf6463d370534b011  usr/share/doc/ptunnel/README.gz
+df507017009e645f32c1949ecfeefaf8  usr/share/doc/ptunnel/changelog.Debian.gz
+07a532e155d8562522e25696d78dfbff  usr/share/doc/ptunnel/changelog.gz
+3d24f1f6c0eb2853d59d907ca78b51fd  usr/share/doc/ptunnel/copyright
+726132d0242eb4ea20c37e7862bde690  usr/share/doc/ptunnel/web/index.html
+181c00e8a9cc63a7b2a2d3ce6e226db0  usr/share/doc/ptunnel/web/packet-format.png
+4d04de264edea4192d2ff1fa8c5870b3  usr/share/doc/ptunnel/web/setup.png
+ecdcbebb7be8ef801c412de955f29758  usr/share/man/man8/ptunnel.8.gz

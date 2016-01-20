@@ -1,0 +1,10 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libcapstone.so.3
+/usr/share
+/usr/share/doc
+/usr/share/doc/libcapstone3
+/usr/share/doc/libcapstone3/changelog.Debian.gz
+/usr/share/doc/libcapstone3/changelog.gz
+/usr/share/doc/libcapstone3/copyright

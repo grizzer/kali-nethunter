@@ -1,0 +1,1 @@
+../../../../share/pyshared/xlsxwriter/compatibility.py

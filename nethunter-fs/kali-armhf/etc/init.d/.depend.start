@@ -1,0 +1,10 @@
+TARGETS = rsyslog thin bootlogs killprocs motd binfmt-support dbus stunnel4 single rsync cron saned rc.local rmnologin
+INTERACTIVE =
+dbus: rsyslog
+stunnel4: rsyslog
+single: killprocs bootlogs motd
+rsync: rsyslog
+cron: rsyslog
+saned: rsyslog dbus
+rc.local: rsyslog dbus saned stunnel4 thin bootlogs motd rsync cron binfmt-support
+rmnologin: rsyslog dbus saned stunnel4 thin bootlogs motd rsync cron binfmt-support

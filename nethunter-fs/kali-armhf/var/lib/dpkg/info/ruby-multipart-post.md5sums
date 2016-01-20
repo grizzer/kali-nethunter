@@ -1,0 +1,10 @@
+9ecf9ee94cff2d9c1ff53b299343e229  usr/lib/ruby/vendor_ruby/composite_io.rb
+088ca27d04e3b7e3dcc55d8e8d916ba9  usr/lib/ruby/vendor_ruby/multipart_post.rb
+4df8475a527bc78273897f5c83ae8acc  usr/lib/ruby/vendor_ruby/multipartable.rb
+469d05036cd0b981b201d0fe50360f5b  usr/lib/ruby/vendor_ruby/net/http/post/multipart.rb
+bb3a5104f3c412c1dc651c4f259c4d55  usr/lib/ruby/vendor_ruby/parts.rb
+5e20b3e40601317121db8fba20a38680  usr/share/doc/ruby-multipart-post/README.txt
+762e3fe9b9080b5c802083c85c9c9d92  usr/share/doc/ruby-multipart-post/changelog.Debian.gz
+681efed123c90234f5b56a8d917386fa  usr/share/doc/ruby-multipart-post/changelog.gz
+99afbaa0f98fabd2a566464ffbab8033  usr/share/doc/ruby-multipart-post/copyright
+8d1e6cb90b5b03d13ee319072b0dc322  usr/share/rubygems-integration/all/specifications/multipart-post-1.2.0.gemspec

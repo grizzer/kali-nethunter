@@ -1,0 +1,10 @@
+ed9bfa3bf9aa7f6cb988db02ae940ba3  usr/lib/python2.7/dist-packages/_nfqueue.so
+bbc6201d24440d5ec54b821e088f4efb  usr/lib/python2.7/dist-packages/nfqueue.py
+7f62fcb94cb44b2438d7de996f1171e3  usr/share/doc/python-nfqueue/changelog.Debian.armhf.gz
+223ec52a7d16f9b4ad9c470c6272b21b  usr/share/doc/python-nfqueue/changelog.Debian.gz
+0a3661604aefa3349aa0ffa795269c16  usr/share/doc/python-nfqueue/copyright
+18236d3546ec6d43228ce7bfc4828732  usr/share/doc/python-nfqueue/examples/example.py
+8f65e7bace68cdd3215f9d9881ac7206  usr/share/doc/python-nfqueue/examples/nfq_asyncore.py
+086cc07057912299dee6a59320af3c66  usr/share/doc/python-nfqueue/examples/nfq_dump_pcap.py
+d878151d67cd9f9e4646bb40387a6421  usr/share/doc/python-nfqueue/examples/rewrite.py
+1e31f17f42b537d5db23e0b2185fd381  usr/share/doc/python-nfqueue/examples/za.py

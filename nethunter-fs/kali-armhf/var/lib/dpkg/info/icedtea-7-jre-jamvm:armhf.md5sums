@@ -1,0 +1,4 @@
+63b230d64636f973e6d029e6b0d9447d  usr/lib/jvm/java-7-openjdk-armhf/jre/lib/arm/jamvm/libjvm.so
+d3b30002435b18abdb5ec00c0e521418  usr/share/doc/icedtea-7-jre-jamvm/changelog.Debian.gz
+6e75a034b808b1e4a11c0a5834060e8f  usr/share/doc/icedtea-7-jre-jamvm/copyright
+364045e55a9b28a9ca135561390ef942  usr/share/lintian/overrides/icedtea-7-jre-jamvm

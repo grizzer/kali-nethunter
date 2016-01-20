@@ -1,0 +1,17 @@
+8d88f21918e0bcfc593c89a701b59a9c  usr/bin/activate-global-python-argcomplete
+71f515bce46011af4f9076a1722bffe7  usr/bin/python-argcomplete-check-easy-install-script
+6ef2f430f053ae2ddc878902d3a851af  usr/bin/register-python-argcomplete
+7456c81ae31f1bed9656728982018e75  usr/lib/python2.7/dist-packages/argcomplete-0.8.1.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python2.7/dist-packages/argcomplete-0.8.1.egg-info/dependency_links.txt
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python2.7/dist-packages/argcomplete-0.8.1.egg-info/not-zip-safe
+d3cff5244800fee6a71eac88bc8a7e25  usr/lib/python2.7/dist-packages/argcomplete-0.8.1.egg-info/top_level.txt
+4a1d7c8b708a6faac08b8d2addcb0a90  usr/lib/python2.7/dist-packages/argcomplete/__init__.py
+2154376fda3446c57a84526953796e50  usr/lib/python2.7/dist-packages/argcomplete/bash_completion.d/python-argcomplete.sh
+87e7547640191189f813e5698e26a59c  usr/lib/python2.7/dist-packages/argcomplete/completers.py
+6a16462117a994e0cee9b04f433e69bc  usr/lib/python2.7/dist-packages/argcomplete/my_argparse.py
+8ad0fe1610331c5add4ac8c8013bb1cf  usr/lib/python2.7/dist-packages/argcomplete/my_shlex.py
+8bac0da36d2ec306475c99a53eff7981  usr/share/doc/python-argcomplete/changelog.Debian.gz
+d29e22b56658014a3fbf71b8d2ad0918  usr/share/doc/python-argcomplete/copyright
+b589b28fce4d792cc56e6bf5bc8a7330  usr/share/man/man1/activate-global-python-argcomplete.1.gz
+5f61ee6a403f611236011bfc58b3372d  usr/share/man/man1/python-argcomplete-check-easy-install-script.1.gz
+c3dd81e2020c3d8ce3efe0ee68aef8f9  usr/share/man/man1/register-python-argcomplete.1.gz

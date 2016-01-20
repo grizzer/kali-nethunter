@@ -1,0 +1,6 @@
+2a6ced64ac2481c77caf3e142ea593b6  usr/lib/ruby/vendor_ruby/dm-do-adapter.rb
+04b42bb67eea3836eb5a9029ba96e34c  usr/lib/ruby/vendor_ruby/dm-do-adapter/adapter.rb
+0d0bd614abd8229818eaba0996bce131  usr/lib/ruby/vendor_ruby/dm-do-adapter/spec/shared_spec.rb
+b07fc8126d58e97786d28dab23fec1ef  usr/share/doc/ruby-dm-do-adapter/changelog.Debian.gz
+a20076d0800c39881d79c2b09b7c7b17  usr/share/doc/ruby-dm-do-adapter/copyright
+cddd081daebcb9a9998dbafe21a2c5df  usr/share/rubygems-integration/all/specifications/dm-do-adapter-1.2.0.gemspec

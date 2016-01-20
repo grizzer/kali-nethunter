@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/bin
+/usr/bin/giskismet
+/usr/share
+/usr/share/doc
+/usr/share/doc/giskismet
+/usr/share/doc/giskismet/README.txt
+/usr/share/doc/giskismet/changelog.Debian.gz
+/usr/share/doc/giskismet/changelog.gz
+/usr/share/doc/giskismet/EXAMPLES.txt
+/usr/share/doc/giskismet/CHANGELOG.txt
+/usr/share/doc/giskismet/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/giskismet.1p.gz

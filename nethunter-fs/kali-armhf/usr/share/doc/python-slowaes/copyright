@@ -1,0 +1,125 @@
+Debian package creation : Bart Martens, 1 April 2013.
+
+Upstream source : http://code.google.com/p/slowaes/
+
+The files js/aes.js, js/jsHash.js and js/cryptoHelpers.js contain this
+copyright and license information :
+
+  |  aes.js: implements AES - Advanced Encryption Standard
+  |  from the SlowAES project, http://code.google.com/p/slowaes/
+  |  
+  |  Copyright (c) 2008   Josh Davis ( http://www.josh-davis.org ),
+  |  Mark Percival ( http://mpercival.com ),
+  |  
+  |  Ported from C code written by Laurent Haan ( http://www.progressive-coding.com )
+  |  
+  |  Licensed under the Apache License, Version 2.0
+  |  http://www.apache.org/licenses/
+
+  |  jsHash.js: implements AES - Advanced Encryption Standard
+  |  from the SlowAES project, http://code.google.com/p/slowaes/
+  |  
+  |  Copyright (c) 2008   Josh Davis ( http://www.josh-davis.org )
+  |  
+  |  Licensed under the Apache License, Version 2.0
+  |  http://www.apache.org/licenses/
+  |  
+  |  sha2 portions adapted from jsSHA2 ( http://anmar.eu.org/projects/jssha2/ )
+  |  Copyright Angel Marin 2003-2004 - http://anmar.eu.org/
+  |  Distributed under the BSD License
+
+  |  cryptoHelpers.js: implements AES - Advanced Encryption Standard
+  |  from the SlowAES project, http://code.google.com/p/slowaes/
+  |  
+  |  Copyright (c) 2008   Josh Davis ( http://www.josh-davis.org ),
+  |  Mark Percival ( http://mpercival.com ),
+  |  Johan Sundstrom ( http://ecmanaut.blogspot.com ),
+  |  John Resig ( http://ejohn.org )
+  |  
+  |  Licensed under the Apache License, Version 2.0
+  |  http://www.apache.org/licenses/
+
+The files php/cryptoHelpers.php, php/aes_small.php and php/aes_fast.php contain
+this copyright and license information :
+
+  |  cryptoHelpers.php: implements AES - Advanced Encryption Standard
+  |  from the SlowAES project, http://code.google.com/p/slowaes/
+  |  
+  |  Copyright (c) 2008   Josh Davis ( http://www.josh-davis.org ),
+  |  Mark Percival ( http://mpercival.com ),
+  |  Johan Sundstrom ( http://ecmanaut.blogspot.com ),
+  |  John Resig ( http://ejohn.org )
+  |  
+  |  Ported from JavaScript to PHP by ALeX Kazik
+  |  
+  |  Licensed under the Apache License, Version 2.0
+  |  http://www.apache.org/licenses/
+
+  |  aes.php: implements AES - Advanced Encryption Standard
+  |  from the SlowAES project, http://code.google.com/p/slowaes/
+  |  
+  |  Copyright (c) 2008   Josh Davis ( http://www.josh-davis.org ),
+  |  Mark Percival ( http://mpercival.com ),
+  |  
+  |  Ported from C code written by Laurent Haan ( http://www.progressive-coding.com )
+  |  
+  |  Ported from JavaScript to PHP by ALeX Kazik
+  |  
+  |  Licensed under the Apache License, Version 2.0
+  |  http://www.apache.org/licenses/
+
+  |  aes.php: implements AES - Advanced Encryption Standard
+  |  from the SlowAES project, http://code.google.com/p/slowaes/
+  |  
+  |  Copyright (c) 2008   Josh Davis ( http://www.josh-davis.org ),
+  |  Mark Percival ( http://mpercival.com ),
+  |  
+  |  Ported from C code written by Laurent Haan ( http://www.progressive-coding.com )
+  |  
+  |  Ported from JavaScript to PHP by ALeX Kazik
+  |  
+  |  Licensed under the Apache License, Version 2.0
+  |  http://www.apache.org/licenses/
+
+The file python/aes.py contains this copyright and license information :
+
+  |  aes.py: implements AES - Advanced Encryption Standard
+  |  from the SlowAES project, http://code.google.com/p/slowaes/
+  |  
+  |  Copyright (c) 2008    Josh Davis ( http://www.josh-davis.org ),
+  |  Alex Martelli ( http://www.aleax.it )
+  |  
+  |  Ported from C code written by Laurent Haan ( http://www.progressive-coding.com )
+  |  
+  |  Licensed under the Apache License, Version 2.0
+  |  http://www.apache.org/licenses/
+
+The files in the ruby/ directory have this copyright and license :
+
+  |  Copyright (c) 2007 Alex Boussinet
+  |  
+  |  Permission is hereby granted, free of charge, to any person obtaining
+  |  a copy of this software and associated documentation files (the
+  |  "Software"), to deal in the Software without restriction, including
+  |  without limitation the rights to use, copy, modify, merge, publish,
+  |  distribute, sublicense, and/or sell copies of the Software, and to
+  |  permit persons to whom the Software is furnished to do so, subject to
+  |  the following conditions:
+  |  
+  |  The above copyright notice and this permission notice shall be
+  |  included in all copies or substantial portions of the Software.
+  |  
+  |  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  |  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  |  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  |  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+  |  LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+  |  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+  |  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The Debian packaging is
+Copyright (C) 2014 Joseph Bisch <joseph.bisch@gmail.com>
+Copyright (C) 2013 Bart Martens <bartm@knars.be>
+and is licensed under the GPL version 3, see :
+/usr/share/common-licenses/GPL-3
+

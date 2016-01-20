@@ -1,0 +1,11 @@
+8dd5fefa78dc01f56ec25862148bdf8b  usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders/io-wmf.so
+fd35ea7360ae43403fa4336c6c5796fe  usr/lib/arm-linux-gnueabihf/libwmf-0.2.so.7.1.0
+bdae0c18fb8d293eff35a4c85b679567  usr/lib/arm-linux-gnueabihf/libwmflite-0.2.so.7.0.1
+38f6ee674a665d58c4be2468cd36c98b  usr/share/doc/libwmf0.2-7/CREDITS
+3cb02b8d88e598259098379bb01af4cd  usr/share/doc/libwmf0.2-7/README.gz
+1f49b58ae609e39754a750dac10c5837  usr/share/doc/libwmf0.2-7/TODO
+eb533e788ec088d450e415c9f191f891  usr/share/doc/libwmf0.2-7/TODO.Debian
+3da5e8fc3539a9b28a025f61adec591a  usr/share/doc/libwmf0.2-7/changelog.Debian.gz
+2cff47b2ee197304362319f0575feb9c  usr/share/doc/libwmf0.2-7/changelog.gz
+1fa0c3ad57891909d12fade4a1f4cc92  usr/share/doc/libwmf0.2-7/copyright
+b6df5d979e9559377b8ff6a6cc36690a  usr/share/lintian/overrides/libwmf0.2-7

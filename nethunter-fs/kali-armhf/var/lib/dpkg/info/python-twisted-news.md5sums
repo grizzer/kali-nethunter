@@ -1,0 +1,16 @@
+2295e3f8477951e6d48fcb5a73231b1f  usr/lib/python2.7/dist-packages/Twisted_News-14.0.2.egg-info
+c412058eea06c5bb1be3609f12777680  usr/lib/python2.7/dist-packages/twisted/news/__init__.py
+84ee1e74be62ca77fa8be23c25b8c49d  usr/lib/python2.7/dist-packages/twisted/news/_version.py
+74d6bba4d562ad120898881601d704fd  usr/lib/python2.7/dist-packages/twisted/news/database.py
+a07929343840ab8e4e4ed74b50288f45  usr/lib/python2.7/dist-packages/twisted/news/news.py
+dc97b505f70641f65c28c17af10d1703  usr/lib/python2.7/dist-packages/twisted/news/nntp.py
+8854f0e6cac13e6b83e97859dfead2ae  usr/lib/python2.7/dist-packages/twisted/news/tap.py
+4d50992dc5c0f274745fe3e54ff95f35  usr/lib/python2.7/dist-packages/twisted/news/test/__init__.py
+6f0f25da07c1c4c9a101636d583a8146  usr/lib/python2.7/dist-packages/twisted/news/test/test_database.py
+850d653b1b14116d0873c2c818cc2602  usr/lib/python2.7/dist-packages/twisted/news/test/test_news.py
+43f8367591f8b9045717ccfec1fd8263  usr/lib/python2.7/dist-packages/twisted/news/test/test_nntp.py
+0c3c1038d18e81a87d386b02afcd4803  usr/lib/python2.7/dist-packages/twisted/plugins/twisted_news.py
+30afecfdd708abbc839ccc05300acad2  usr/share/doc/python-twisted-news/NEWS.gz
+1cbd0530a00e44969cfdfc7ea9094373  usr/share/doc/python-twisted-news/README
+a22143f893f7b4d641904237a49fec0a  usr/share/doc/python-twisted-news/changelog.Debian.gz
+97f28d31ea3bc2ec7fde1477a2e4e4b1  usr/share/doc/python-twisted-news/copyright

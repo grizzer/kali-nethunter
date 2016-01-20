@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python2.7
+/usr/lib/python2.7/dist-packages
+/usr/lib/python2.7/dist-packages/Twisted-14.0.2.egg-info
+/usr/share
+/usr/share/doc
+/usr/share/doc/python-twisted
+/usr/share/doc/python-twisted/copyright
+/usr/share/doc/python-twisted/changelog.Debian.gz
+/usr/share/menu
+/usr/share/menu/python-twisted

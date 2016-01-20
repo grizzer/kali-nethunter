@@ -1,0 +1,11 @@
+07f34e4a37e04007b319a9d2ec585d79  usr/lib/arm-linux-gnueabihf/ruby/vendor_ruby/2.1.0/do_mysql/do_mysql.so
+310ce2ee7d2a473b052f0c11cb4e8cc8  usr/lib/ruby/vendor_ruby/do_mysql.rb
+91aeb1b25f637435782e176d288e087f  usr/lib/ruby/vendor_ruby/do_mysql/encoding.rb
+916551a2b72a307eff6d53a4df98fb92  usr/lib/ruby/vendor_ruby/do_mysql/transaction.rb
+ad8155f553297e7fe080b288826a8c0f  usr/lib/ruby/vendor_ruby/do_mysql/version.rb
+3442131c2f1c355cc57c961f86192292  usr/share/doc/ruby-dataobjects-mysql/README.markdown
+350ef1044476a4ad1827d4f77b6105e4  usr/share/doc/ruby-dataobjects-mysql/changelog.Debian.armhf.gz
+f6cc1c024e9ca6694e276321a24848b7  usr/share/doc/ruby-dataobjects-mysql/changelog.Debian.gz
+2c42e7a7e58a900949e0044de3237276  usr/share/doc/ruby-dataobjects-mysql/changelog.gz
+05a24cb6645ac597704cdf1417242307  usr/share/doc/ruby-dataobjects-mysql/copyright
+543670d6bcf4b34ff9fdaf6e43d42ced  usr/share/rubygems-integration/2.1/specifications/do_mysql-0.10.14.gemspec

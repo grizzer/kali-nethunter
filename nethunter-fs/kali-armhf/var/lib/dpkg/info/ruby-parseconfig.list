@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/ruby
+/usr/lib/ruby/vendor_ruby
+/usr/lib/ruby/vendor_ruby/parseconfig.rb
+/usr/share
+/usr/share/doc
+/usr/share/doc/ruby-parseconfig
+/usr/share/doc/ruby-parseconfig/changelog.gz
+/usr/share/doc/ruby-parseconfig/README.md
+/usr/share/doc/ruby-parseconfig/copyright
+/usr/share/doc/ruby-parseconfig/changelog.Debian.gz
+/usr/share/rubygems-integration
+/usr/share/rubygems-integration/all
+/usr/share/rubygems-integration/all/specifications
+/usr/share/rubygems-integration/all/specifications/parseconfig-1.0.2.gemspec

@@ -1,0 +1,6 @@
+d81a7cad9f54f612c23fd4ab6a245b02  usr/bin/tshark
+ff7e49d8018e4b144be943f8abeaa706  usr/share/doc/tshark/README.Debian
+f0a0e1b8403f74f7d558ee31106a7d54  usr/share/doc/tshark/changelog.Debian.gz
+10a36373072707ab4fb5de8117efe0b8  usr/share/doc/tshark/changelog.gz
+c393f7c1204e120b3e8d9b00130faaef  usr/share/doc/tshark/copyright
+2911d349be9fbdb31300514a95f411e3  usr/share/man/man1/tshark.1.gz

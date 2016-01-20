@@ -1,0 +1,23 @@
+/usr/bin/ruby2.1 extconf.rb 
+
+[*] Running checks for pcaprub_c code...
+platform is arm-linux-gnueabihf
+checking for pcap_open_live() in -lpcap... yes
+checking for pcap_setnonblock() in -lpcap... yes
+creating Makefile
+
+make "DESTDIR=" clean
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/pcaprub-0.12.0/ext/pcaprub_c'
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/pcaprub-0.12.0/ext/pcaprub_c'
+
+make "DESTDIR="
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/pcaprub-0.12.0/ext/pcaprub_c'
+compiling pcaprub.c
+linking shared-object pcaprub_c.so
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/pcaprub-0.12.0/ext/pcaprub_c'
+
+make "DESTDIR=" install
+make[2]: Entering directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/pcaprub-0.12.0/ext/pcaprub_c'
+/usr/bin/install -c -m 0755 pcaprub_c.so ./.gem.20151214-15291-1pvtqhi
+installing default pcaprub_c libraries
+make[2]: Leaving directory '/build/metasploit-framework-acrR_U/metasploit-framework-4.11.5-2015120901/vendor/bundle/ruby/2.1.0/gems/pcaprub-0.12.0/ext/pcaprub_c'

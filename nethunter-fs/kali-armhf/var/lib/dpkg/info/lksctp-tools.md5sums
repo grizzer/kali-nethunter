@@ -1,0 +1,15 @@
+22a4289ee6ae0a2a8324e00e84064602  usr/bin/checksctp
+54095e26b48dbea2b0f9f926af594a5a  usr/bin/sctp_darn
+a5f813051387b2a2a0a40e6467e2a3b4  usr/bin/sctp_status
+10a9781d05eec48d097611c52ddaa8be  usr/bin/sctp_test
+8c5d7e80d77f2c21eed35c520d2a6ff5  usr/bin/withsctp
+6091bcb76f050b969a2df48f288034f1  usr/lib/arm-linux-gnueabihf/lksctp-tools/libwithsctp.so.1.0.16
+215e56d592329d2bfb5b1137a2d76c29  usr/share/doc/lksctp-tools/AUTHORS
+31110afa060ccffa19c4411f381222fe  usr/share/doc/lksctp-tools/README.gz
+6a64daa8ee24ee24072b98a9fc3e834e  usr/share/doc/lksctp-tools/changelog.Debian.gz
+58137b037a4588e46fe7c71b84b7fd97  usr/share/doc/lksctp-tools/changelog.gz
+2acfb477a3fe1e8cca04ab68f1fac4e2  usr/share/doc/lksctp-tools/copyright
+fffd973022f96ffd172ac9a3d1e0c218  usr/share/man/man1/checksctp.1.gz
+fd0d9bc12baff5e079411977893b0c2e  usr/share/man/man1/sctp_darn.1.gz
+f6210e3c4ed2d541530da3d12a7531cb  usr/share/man/man1/sctp_test.1.gz
+92d049a8c3bfe84e5ed794f5320b57cb  usr/share/man/man1/withsctp.1.gz

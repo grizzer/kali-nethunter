@@ -1,0 +1,10 @@
+9c755b22835488de865b8328169dcdaf  usr/lib/ruby/vendor_ruby/memoizable.rb
+cc132f5c81fac4f5eb8454c20cf62c41  usr/lib/ruby/vendor_ruby/memoizable/instance_methods.rb
+8c43718b64bc8fce018846c54e8983e2  usr/lib/ruby/vendor_ruby/memoizable/memory.rb
+14d1cd089e274ab1b223c68e7984c8bf  usr/lib/ruby/vendor_ruby/memoizable/method_builder.rb
+181d7b7556657eeb49a8cacc91e741d5  usr/lib/ruby/vendor_ruby/memoizable/module_methods.rb
+9cb38c44547e1d43d3f02a4131ad1094  usr/lib/ruby/vendor_ruby/memoizable/version.rb
+58c5cc1ce5f3097536b06c789d0fa042  usr/share/doc/ruby-memoizable/README.md
+61e029f99d04c44c3ab051304425efe9  usr/share/doc/ruby-memoizable/changelog.Debian.gz
+efe6d43825a3d45d3085478265b89cc0  usr/share/doc/ruby-memoizable/copyright
+ecb810a3d056c4dda076835efb4788d3  usr/share/rubygems-integration/all/specifications/memoizable-0.4.2.gemspec

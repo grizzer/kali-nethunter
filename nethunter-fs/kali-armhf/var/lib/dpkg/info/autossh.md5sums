@@ -1,0 +1,14 @@
+0b2fbe7ab8f11312c5874a3a4f4d0b8b  usr/bin/autossh
+87f8b39b03f42f97a5f9b1f7c26eb637  usr/bin/autossh-argv0
+33305bfd8f3bb0817f7c174380552e6b  usr/bin/rscreen
+0468071a17d06f8bffc71744eaa6abda  usr/lib/autossh/autossh
+415a211e26bbed1238e235fa72102b77  usr/share/doc/autossh/NEWS.Debian.gz
+51d2ceb7148636b761c9ddf4362b23d9  usr/share/doc/autossh/README.Debian
+b2a2bbfbcb673244cfe496d8d6a1b4f7  usr/share/doc/autossh/README.gz
+1de90c9266ab9da55d0f56b8f9ff18b0  usr/share/doc/autossh/changelog.Debian.gz
+57476335c6f399d89736409dd3664f7a  usr/share/doc/autossh/changelog.gz
+eeb53efd74819d9b0c4504a46ffe44b8  usr/share/doc/autossh/copyright
+dcfff85648256f84a8c25e9ae3d63ee0  usr/share/doc/autossh/examples/autossh.host
+4096ae96208ce420bff19d5e0d9ea249  usr/share/doc/autossh/examples/rscreen
+f9087317a8b226f217baf9ad085343ee  usr/share/lintian/overrides/autossh
+8545a63c1a918d0bbf01d7cc95a89eef  usr/share/man/man1/autossh.1.gz

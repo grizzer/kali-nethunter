@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+# Clean up left over from versions before we started using dh_python2
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" lt-nl 4.3.0-1kali2; then
+    # Drop unmanaged .pyc files
+    find /usr/share/recon-ng -name '*.pyc' -delete
+    # Drop empty directories now
+    find /usr/share/recon-ng -depth -type d -print0 | xargs -0 rmdir --ignore-fail-on-non-empty
+fi
+
+

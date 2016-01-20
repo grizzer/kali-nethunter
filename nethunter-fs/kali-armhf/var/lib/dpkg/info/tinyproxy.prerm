@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/tinyproxy" ]; then
+	invoke-rc.d tinyproxy stop || exit $?
+fi
+# End automatically added section

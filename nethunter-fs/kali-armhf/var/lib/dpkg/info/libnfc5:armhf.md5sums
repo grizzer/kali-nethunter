@@ -1,0 +1,6 @@
+92da8f7fbfa5f8f2e453eb2269f2eb8e  lib/udev/rules.d/42-pn53x.rules
+de03c81ed17e732c59f0788ad64e898e  usr/lib/arm-linux-gnueabihf/libnfc.so.5.0.1
+dc39d43c4f089eea5fc626b0b58694d0  usr/share/doc/libnfc5/README.Debian
+a3a40180bd34a973ff6b10dc4b8cadb2  usr/share/doc/libnfc5/changelog.Debian.gz
+870e85ab15aca152d7ddaf8f914c4084  usr/share/doc/libnfc5/changelog.gz
+5f8c0da90f49fa51c668c0ebdbb28091  usr/share/doc/libnfc5/copyright

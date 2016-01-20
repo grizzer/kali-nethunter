@@ -1,0 +1,1 @@
+../../../../../share/pyshared/watchdog/tricks/__init__.py

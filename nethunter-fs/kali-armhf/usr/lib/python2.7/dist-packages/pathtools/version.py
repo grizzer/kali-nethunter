@@ -1,0 +1,1 @@
+../../../../share/pyshared/pathtools/version.py

@@ -1,0 +1,10 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/device-pharmer
+/usr/share/doc/device-pharmer/README.md.gz
+/usr/share/doc/device-pharmer/copyright
+/usr/share/doc/device-pharmer/changelog.Debian.gz
+/usr/bin
+/usr/bin/device-pharmer

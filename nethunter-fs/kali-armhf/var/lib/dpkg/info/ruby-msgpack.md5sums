@@ -1,0 +1,8 @@
+37d8555da17228f90fdcb9b8a09ab314  usr/lib/arm-linux-gnueabihf/ruby/vendor_ruby/2.1.0/msgpack/msgpack.so
+c44f1e521f8de7a398a91277bd2b1dad  usr/lib/ruby/vendor_ruby/msgpack.rb
+a514e5836f5caab738ce0cfa4da9e9ee  usr/lib/ruby/vendor_ruby/msgpack/version.rb
+7604a7837f64130ba287c9136875fe98  usr/share/doc/ruby-msgpack/README.rdoc
+9f514892fd01069209d14b550864e815  usr/share/doc/ruby-msgpack/changelog.Debian.gz
+4c8de43b10e8e6f7d8f722dabc70b8d3  usr/share/doc/ruby-msgpack/changelog.gz
+c3b6aba9e301bddc18bb8268006894d6  usr/share/doc/ruby-msgpack/copyright
+574eb7f4ca100ded0fe40988ddc14c02  usr/share/rubygems-integration/2.1/specifications/msgpack-0.5.8.gemspec

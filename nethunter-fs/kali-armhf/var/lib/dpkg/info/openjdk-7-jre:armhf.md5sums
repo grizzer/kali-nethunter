@@ -1,0 +1,17 @@
+cb40221105c64ad9cb72d85ff872ffcb  usr/lib/jvm/java-7-openjdk-armhf/jre/bin/policytool
+c369480e9aad0bdd8a277a53f02617e5  usr/lib/jvm/java-7-openjdk-armhf/jre/lib/arm/libjavagtk.so
+970537900ea17f6ad8e18cd531267127  usr/lib/jvm/java-7-openjdk-armhf/jre/lib/arm/libjsoundalsa.so
+7169d25897096942264b02bea7a425f5  usr/lib/jvm/java-7-openjdk-armhf/jre/lib/arm/libsplashscreen.so
+62bb76d96f3c423d334d10ef86dc48c9  usr/lib/jvm/java-7-openjdk-armhf/jre/lib/arm/xawt/libmawt.so
+df278824e1ada3239070ef5ccb0aa444  usr/lib/jvm/java-7-openjdk-armhf/jre/man/ja_JP.UTF-8/man1/policytool.1.gz
+9d0929436c759fe208cbcee6d1dd9a06  usr/lib/jvm/java-7-openjdk-armhf/jre/man/man1/policytool.1.gz
+679082784519a73f168f5c296ae8e832  usr/share/application-registry/openjdk-7-archive.applications
+d0313000ae7568afcf25ad3638379d86  usr/share/applications/openjdk-7-policytool.desktop
+3fc92acc9ae2008f239dfdcad13db486  usr/share/icons/hicolor/16x16/apps/openjdk-7.png
+6ec5775e99735e6da7e09a4c2b7d1421  usr/share/icons/hicolor/24x24/apps/openjdk-7.png
+82963a4b30de3ff6c6c33af9def62928  usr/share/icons/hicolor/32x32/apps/openjdk-7.png
+cad62d37bb958532d6298b10a45697f7  usr/share/icons/hicolor/48x48/apps/openjdk-7.png
+9eb120b8354795570346c0ce2280b081  usr/share/lintian/overrides/openjdk-7-jre
+1393fd76c9e37ed093e46dd5a09b95c4  usr/share/mime-info/openjdk-7-archive.keys
+3703e5f1e5748cca784ff793032263a1  usr/share/mime-info/openjdk-7-archive.mime
+b5fc0cafdf7025036ebae6dc53791f6b  usr/share/pixmaps/openjdk-7.xpm

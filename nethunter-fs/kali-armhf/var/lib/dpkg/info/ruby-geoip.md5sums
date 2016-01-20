@@ -1,0 +1,12 @@
+54c6f2c6cb5e44362490eca56e2be9a1  usr/bin/geoip
+9d3b337e99bdc37fd6d371cc1eed6bd5  usr/lib/ruby/vendor_ruby/geoip.rb
+3eabc5d54d1a84473a401f406b4f2709  usr/share/doc/ruby-geoip/README.rdoc.gz
+46cfeebd27bc8fabbcd26e9d3a2d5473  usr/share/doc/ruby-geoip/changelog.Debian.gz
+b5d27fa00520b416636d11bf58dec23e  usr/share/doc/ruby-geoip/copyright
+28993a1a24dd9fcb5955e2d44950dac3  usr/share/ruby-geoip/geoip/country_code.yml
+d7ada08e4fc2bd2a54989b807603c66d  usr/share/ruby-geoip/geoip/country_code3.yml
+6b7207ce439de92edc455720e9c16532  usr/share/ruby-geoip/geoip/country_continent.yml
+3a3edbd936751306d4fe9b5a2a624804  usr/share/ruby-geoip/geoip/country_name.yml
+7c4bd4759078e23d4aa6f08e3d7ca89a  usr/share/ruby-geoip/geoip/region.yml
+968dc631df4ee9f3534cd1c32842d9f2  usr/share/ruby-geoip/geoip/time_zone.yml
+b6234abfd3eb96189e4463fa8fd3769e  usr/share/rubygems-integration/all/specifications/geoip-1.4.0.gemspec

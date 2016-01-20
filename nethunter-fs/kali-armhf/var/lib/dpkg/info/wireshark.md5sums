@@ -1,0 +1,11 @@
+19866cac535e9b837bf2d52e1f2b5160  usr/bin/wireshark
+d27c69926f111b1c052f8d974ee006d3  usr/share/applications/wireshark.desktop
+ff7e49d8018e4b144be943f8abeaa706  usr/share/doc/wireshark/README.Debian
+f0a0e1b8403f74f7d558ee31106a7d54  usr/share/doc/wireshark/changelog.Debian.gz
+10a36373072707ab4fb5de8117efe0b8  usr/share/doc/wireshark/changelog.gz
+c393f7c1204e120b3e8d9b00130faaef  usr/share/doc/wireshark/copyright
+1e4afc76f440f8461f8e4ad392e8e68a  usr/share/icons/hicolor/scalable/apps/wireshark.svg
+085ad0b498a0f31376afbb686aff461d  usr/share/man/man1/wireshark.1.gz
+f273946d8b7d82839cfe815b92784710  usr/share/menu/wireshark
+0e18908c7e8a21fe8310d9031993a828  usr/share/mime/packages/wireshark.xml
+d816003250e4dda6589567e87d4cdbb2  usr/share/pixmaps/wsicon32.xpm

@@ -1,0 +1,8 @@
+113fe6cb834acf9db5ccb7aa39344be9  usr/bin/jardetector
+6b6e3f5d2304f59b2bcd970ca7d53bca  usr/bin/jarwrapper
+c77de6623446b300f33de74a11a8c9ea  usr/share/binfmts/jarwrapper
+d094fda0c6c63dd517c36d1a8bd9a1d1  usr/share/doc/jarwrapper/changelog.gz
+055980b377076e1d5a1d879e93de0aaa  usr/share/doc/jarwrapper/copyright
+a37eefa42ed901a33b30c14738de4202  usr/share/jarwrapper/java-arch.sh
+0ab2274631ba2d2fef62a1138cfca4d9  usr/share/man/man1/jardetector.1.gz
+5f15d55a5df9cdd55be224d24bc60339  usr/share/man/man1/jarwrapper.1.gz

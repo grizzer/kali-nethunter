@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libnetfilter-queue1
+/usr/share/doc/libnetfilter-queue1/changelog.Debian.gz
+/usr/share/doc/libnetfilter-queue1/copyright
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libnetfilter_queue.so.1.3.0
+/usr/lib/arm-linux-gnueabihf/libnetfilter_queue.so.1

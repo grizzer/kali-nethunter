@@ -1,0 +1,9 @@
+c18b231a43cb0840efc3442c24477e74  usr/lib/python2.6/dist-packages/pcapy.so
+1b3b67ff0281acc4bf4d34b5a0c5196c  usr/lib/python2.7/dist-packages/pcapy.so
+e21bfd13977593308197e6c5d3bd5236  usr/share/doc-base/pcapy
+0dfccc600c55f5aa9caefa33a3b1f2c6  usr/share/doc/python-pcapy/README
+35b68f8ce14b92faefa339a57a0f9198  usr/share/doc/python-pcapy/changelog.Debian.gz
+1c29791d1756fe2cf99125c697e24009  usr/share/doc/python-pcapy/changelog.gz
+3a2b2d4371fbc2766a48dbdeaa79e88e  usr/share/doc/python-pcapy/copyright
+6f6aceaf418262a2fdfb856280510706  usr/share/doc/python-pcapy/pcapy.html
+b30a8eb2616317e1dec5406ed95d1f48  usr/share/pyshared/pcapy-0.10.8.egg-info

@@ -1,0 +1,11 @@
+bc2b5bc59aec6b877dc096a7ede5afd2  usr/share/doc-base/python-ipy
+845af20df3a0eb8633a51f68834c5030  usr/share/doc/python-ipy/IPy.html
+3beac940f895a4b97f457dc74f4bbb35  usr/share/doc/python-ipy/README.gz
+0ecd3a449f7c75286674579858f402c9  usr/share/doc/python-ipy/changelog.Debian.gz
+af8c54bd046a9a8c0e078979a5786087  usr/share/doc/python-ipy/changelog.gz
+f85bfc8083a95b3415980ba850dce610  usr/share/doc/python-ipy/copyright
+022de4a53012771ff408ad71b05b1996  usr/share/doc/python-ipy/examples/confbuilder
+a0fb46b4d8711748b237c90529986063  usr/share/doc/python-ipy/examples/confbuilder.py.gz
+6966035dd811082fead3fbc1dc9e9a07  usr/share/lintian/overrides/python-ipy
+acc0380ba43672346c3d56b743f75106  usr/share/pyshared/IPy-0.81.egg-info
+e61c2392a4318f470997c415f6691d3a  usr/share/pyshared/IPy.py

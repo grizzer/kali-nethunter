@@ -1,0 +1,7 @@
+95711225a82f8bc273467491d0aa558a  usr/lib/ruby/vendor_ruby/qr4r.rb
+4990ad0e0bf1e43943a8f1ef959509b9  usr/lib/ruby/vendor_ruby/qr4r/version.rb
+19489f574f75935b8153ceb410c049fc  usr/share/doc/ruby-qr4r/README.md
+07e6f73e044dd018e79da8ee76fd60a4  usr/share/doc/ruby-qr4r/changelog.Debian.gz
+dada8e187535b51d0165668e0436cad9  usr/share/doc/ruby-qr4r/copyright
+3bc18cb938a1d59b2fead71e44207f0f  usr/share/doc/ruby-qr4r/examples/generate_qr4r.rb
+051bf76725408b14f2d2057384fadb68  usr/share/rubygems-integration/all/specifications/qr4r-0.4.0.gemspec

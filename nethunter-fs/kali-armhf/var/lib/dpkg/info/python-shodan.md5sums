@@ -1,0 +1,8 @@
+16a6d1860b8501b00f9cf534c087eb69  usr/share/doc/python-shodan/README.rst
+ca1a394c975beaef99f31f65125be876  usr/share/doc/python-shodan/changelog.Debian.gz
+c5f7f0a415f5ce0ad94b9df6851f182a  usr/share/doc/python-shodan/copyright
+bda4cfe2a7b6a72ed5692d85eafa58f0  usr/share/pyshared/shodan-1.0.2.egg-info
+bb16f8e74d5e1fda4b619bb508eb1f5d  usr/share/pyshared/shodan/__init__.py
+b3f7fb467efcfebbb30911eacc6f320f  usr/share/pyshared/shodan/api.py
+cc0e4e6f9a02e2c949b92f845be9e33c  usr/share/pyshared/shodan/client.py
+862d40e3609bd5afeb4c1697c5587da4  usr/share/pyshared/shodan/wps.py

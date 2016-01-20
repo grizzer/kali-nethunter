@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/sox
+/usr/lib/arm-linux-gnueabihf/sox/libsox_fmt_alsa.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/libsox-fmt-alsa
+/usr/share/doc/libsox-fmt-alsa/changelog.gz
+/usr/share/doc/libsox-fmt-alsa/changelog.Debian.gz
+/usr/share/doc/libsox-fmt-alsa/copyright

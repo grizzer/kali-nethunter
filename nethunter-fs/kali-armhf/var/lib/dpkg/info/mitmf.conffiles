@@ -1,0 +1,7 @@
+/etc/mitmf/app_cache_poison_templates/default.append
+/etc/mitmf/app_cache_poison_templates/default.manifest
+/etc/mitmf/app_cache_poison_templates/facebook.append
+/etc/mitmf/app_cache_poison_templates/facebook.manifest
+/etc/mitmf/app_cache_poison_templates/script.append
+/etc/mitmf/app_cache_poison_templates/test.replace
+/etc/mitmf/mitmf.conf

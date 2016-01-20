@@ -1,0 +1,16 @@
+d997d698889a1f4a7788de02c6f12cab  usr/lib/ruby/vendor_ruby/image_magick/fonts.rb
+f4193e04128f1155e5b320a01f05ca5e  usr/lib/ruby/vendor_ruby/image_magick/resource_limits.rb
+b02158ec4005ffce02f7ddb0fa38f099  usr/lib/ruby/vendor_ruby/initializers/hash.rb
+a5dc4bc71b0b409755e2c219cebff781  usr/lib/ruby/vendor_ruby/mojo_magick.rb
+7761f4a2bd8366a488dd3f1d93346128  usr/lib/ruby/vendor_ruby/mojo_magick/command_status.rb
+95a967fa300f8dba73f11b9b2a642da3  usr/lib/ruby/vendor_ruby/mojo_magick/errors.rb
+bcde29254f4b5d175f12d551dbfdccdf  usr/lib/ruby/vendor_ruby/mojo_magick/font.rb
+28738ceeaf0fd70840139a25d41e01f8  usr/lib/ruby/vendor_ruby/mojo_magick/opt_builder.rb
+a7a7c63838b503acbd3466ed505f5c3f  usr/lib/ruby/vendor_ruby/mojo_magick/util/parser.rb
+2a08d465d42eb1af5d0ad87f4eb32659  usr/lib/ruby/vendor_ruby/mojo_magick/version.rb
+cf2a80ce65e5e4b95334b8d485d2b04a  usr/share/doc/ruby-mojo-magick/README.md.gz
+21428259a6595745e807cda485ec1999  usr/share/doc/ruby-mojo-magick/changelog.Debian.gz
+3a44341c3966f1dbf0e81721cb683022  usr/share/doc/ruby-mojo-magick/copyright
+8384d5efd568509ae8274fde0ec66823  usr/share/doc/ruby-mojo-magick/examples/animated_gif.rb
+709ad00d28ce900cb535e3341f034bc0  usr/share/doc/ruby-mojo-magick/examples/composite.rb
+3d2bee1c5283daf1500e0bc119ff7378  usr/share/rubygems-integration/all/specifications/mojo_magick-0.5.6.gemspec

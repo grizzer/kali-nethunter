@@ -1,0 +1,6 @@
+auto
+/usr/bin/msfmachscan
+
+/usr/share/metasploit-framework/msfmachscan
+50
+
