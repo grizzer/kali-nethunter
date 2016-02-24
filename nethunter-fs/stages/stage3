@@ -55,7 +55,7 @@ echo "source /root/.profile" >> kali-$architecture/root/.bash_profile
 echo "cd ~/" >> kali-$architecture/root/.bash_profile
 
 # Modify Kismet log saving folder
-sed -i 's/hs/\/captures/g' kali-$architecture/etc/kismet/kismet.conf
+sed -i 's/# logprefix=\/some\/path\/to\/logs\//logprefix=\/captures/kismet\//g' kali-$architecture/etc/kismet/kismet.conf
 sed -i 's/# ncsource=wlan0/ncsource=wlan1/g' kali-$architecture/etc/kismet/kismet.conf
 sed -i 's/gpshost=localhost:2947/gpshost=127.0.0.1:2947/g' kali-$architecture/etc/kismet/kismet.conf
 
@@ -101,6 +101,9 @@ sed -i 's/_apt:x:104:65534/_apt:x:104:3004/g' kali-$architecture/etc/passwd
 
 # Insert correct .bashrc file from kali-defaults
 LANG=C chroot kali-$architecture cp /etc/skel/.bashrc /root/.bashrc
+
+# Install bettercap
+LANG=C chroot kali-$architecture gem install bettercap
 
 # Copy necessary scripts and make executable (/dev/null to supress error msgs for following symlinks)
 LANG=C chroot kali-$architecture chmod 755 /usr/bin/* 2> /dev/null
